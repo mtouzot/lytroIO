@@ -65,8 +65,12 @@ set(SOURCES
     src/lytrofile.cpp
 )
 
+# Third-party libraries
+add_subdirectory(libs)
+
 # Create the library target
 add_library(LytroIO ${PUBLIC_HEADERS} ${PRIVATE_HEADERS} ${SOURCES})
+target_link_libraries(LytroIO PRIVATE nlohmann_json::nlohmann_json)
 
 # Add the include directories
 target_include_directories(LytroIO
