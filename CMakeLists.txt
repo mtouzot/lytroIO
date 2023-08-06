@@ -50,19 +50,19 @@ endif()
 
 # Define your library sources
 set(PUBLIC_HEADERS
-    include/lytroio/lytroparser.hpp
-    include/lytroio/lytroelement.hpp
-    include/lytroio/lytrofile.hpp
+    include/lytroio/lytrostream/lytroparser.hpp
+    include/lytroio/lytrostream/lytroelement.hpp
+    include/lytroio/lytrostream/lytrofile.hpp
 )
 
 set(PRIVATE_HEADERS
-    src/utils.hpp
+    src/lytrostream/utils.hpp
 )
 
 set(SOURCES
-    src/lytroparser.cpp
-    src/lytroelement.cpp
-    src/lytrofile.cpp
+    src/lytrostream/lytroparser.cpp
+    src/lytrostream/lytroelement.cpp
+    src/lytrostream/lytrofile.cpp
 )
 
 # Third-party libraries

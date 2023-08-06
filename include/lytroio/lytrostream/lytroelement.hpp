@@ -1,6 +1,6 @@
 // Copyright (c) 2023-present, Martin TOUZOT & LytroIO contributors.
 // Distributed under the GPL-3.0 Licence (https://opensource.org/license/gpl-3-0/)
-/** \file include/lytrioio/lytroelement.hpp
+/** \file include/lytrioio/lytrostream/lytroelement.hpp
  *
  *  \brief Implementation of a component of a Lytro files (.LPF or .LFR formats)
  *

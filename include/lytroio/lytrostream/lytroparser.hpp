@@ -1,6 +1,6 @@
 // Copyright (c) 2023-present, Martin TOUZOT & LytroIO contributors.
 // Distributed under the GPL-3.0 Licence (https://opensource.org/license/gpl-3-0/)
-/** \file include/lytrioio/lytroparser.hpp
+/** \file include/lytrioio/lytrostream/lytroparser.hpp
  *
  *  \brief Implementation of a parser for Lytro files (.LPF or .LFR formats)
  *
@@ -19,7 +19,7 @@
 #ifndef LYTROPARSER_H
 #define LYTROPARSER_H
 
-#include <lytroio/lytroelement.hpp>
+#include <lytroio/lytrostream/lytroelement.hpp>
 #include <fstream>
 #include <vector>
 

@@ -1,7 +1,7 @@
 // Copyright (c) 2023-present, Martin TOUZOT & LytroIO contributors.
 // Distributed under the GPL-3.0 Licence (https://opensource.org/license/gpl-3-0/)
 
-#include <lytroio/lytroelement.hpp>
+#include <lytroio/lytrostream/lytroelement.hpp>
 
 LytroElement::LytroElement(enum LytroElement::LytroHeaderType type) : type_(type)
 {
