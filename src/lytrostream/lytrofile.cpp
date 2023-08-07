@@ -3,18 +3,21 @@
 
 #include <lytroio/lytrostream/lytrofile.hpp>
 
-LytroFile::LytroFile(std::string filename) : filename_(filename)
+namespace lytroio
 {
-    elements_ = new std::vector<LytroElement>();
-}
+    LytroFile::LytroFile(std::string filename) : filename_(filename)
+    {
+        elements_ = new std::vector<LytroElement>();
+    }
 
-LytroFile::~LytroFile()
-{
-    delete elements_;
-}
+    LytroFile::~LytroFile()
+    {
+        delete elements_;
+    }
 
-bool LytroFile::read()
-{
-    LytroParser parser = LytroParser();
-    return parser.parse(filename_, this->elements_);
-}
+    bool LytroFile::read()
+    {
+        LytroParser parser = LytroParser();
+        return parser.parse(filename_, this->elements_);
+    }
+} // namespace lytroio

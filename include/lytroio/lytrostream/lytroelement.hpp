@@ -20,6 +20,8 @@
 #include <iostream>
 #include <cstring>
 
+namespace lytroio
+{
 class LytroElement
 {
     public:
@@ -130,5 +132,7 @@ class LytroElement
         char* sha_ = nullptr;
         char* data_ = nullptr;
 };
+
+} // namespace lytroio
 
 #endif // LYTROELEMENT_H

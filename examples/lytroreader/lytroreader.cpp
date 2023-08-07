@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
     std::cout << "Decoding datas from " << argv[1] << std::endl;
 
-    LytroFile lfile = LytroFile(argv[1]);
+    lytroio::LytroFile lfile = lytroio::LytroFile(argv[1]);
     
     if(lfile.read() == true)
     {

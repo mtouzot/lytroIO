@@ -22,6 +22,8 @@
 #include <vector>
 #include <iterator>
 
+namespace lytroio
+{
 class LytroFile
 {
     public:
@@ -59,5 +61,6 @@ class LytroFile
         std::string filename_;
         std::vector<LytroElement> *elements_;
 };
+} // namespace lytroio
 
 #endif // LYTROFILE_H

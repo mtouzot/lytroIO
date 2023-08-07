@@ -29,6 +29,8 @@
 #define LYTRO_LENGTH 4
 #define LYTRO_SHA1 80
 
+namespace lytroio
+{
 class LytroParser
 {
     public:
@@ -53,5 +55,6 @@ class LytroParser
          */
         bool parse(std::string filepath, std::vector<LytroElement> *elements);
 };
+} // namespace lytroio
 
 #endif // LYTROPARSER_H

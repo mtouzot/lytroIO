@@ -3,81 +3,84 @@
 
 #include <lytroio/lytrostream/lytroelement.hpp>
 
-LytroElement::LytroElement(enum LytroElement::LytroHeaderType type) : type_(type)
+namespace lytroio
 {
-
-}
-
-LytroElement::~LytroElement()
-{
-
-}
-
-const char* LytroElement::type() const
-{
-    switch (this->type_)
+    LytroElement::LytroElement(enum LytroElement::LytroHeaderType type) : type_(type)
     {
-    case LytroElement::LytroHeaderType::LFP :
-        return "LFP";
-    case LytroElement::LytroHeaderType::LFC :
-        return "LFC";
-    case LytroElement::LytroHeaderType::LFM :
-        return "LFM";
-    case LytroElement::LytroHeaderType::NUL:
-    default:
-        return "NUL";
+
     }
-}
 
-const int LytroElement::version() const
-{
-    return this->version_;
-}
+    LytroElement::~LytroElement()
+    {
 
-const int LytroElement::length() const
-{
-    return this->length_;
-}
+    }
 
-const char* LytroElement::sha() const
-{
-    return this->sha_;
-}
+    const char* LytroElement::type() const
+    {
+        switch (this->type_)
+        {
+        case LytroElement::LytroHeaderType::LFP :
+            return "LFP";
+        case LytroElement::LytroHeaderType::LFC :
+            return "LFC";
+        case LytroElement::LytroHeaderType::LFM :
+            return "LFM";
+        case LytroElement::LytroHeaderType::NUL:
+        default:
+            return "NUL";
+        }
+    }
 
-const char* LytroElement::data() const
-{
-    return this->data_;
-}
+    const int LytroElement::version() const
+    {
+        return this->version_;
+    }
 
-void LytroElement::set_version(int &version)
-{
-    this->version_ = version;
-}
+    const int LytroElement::length() const
+    {
+        return this->length_;
+    }
 
-void LytroElement::set_length(int &length)
-{
-    this->length_ = length;
-}
+    const char* LytroElement::sha() const
+    {
+        return this->sha_;
+    }
 
-void LytroElement::set_sha(char *sha, size_t sha_size)
-{
-    uint8_t offset = std::strlen("sha1-");
-    this->sha_ = (char*)std::malloc((sha_size - offset) * sizeof(char));
-    sha += offset;
-    std::memcpy(this->sha_, sha, sha_size);
-}
+    const char* LytroElement::data() const
+    {
+        return this->data_;
+    }
 
-void LytroElement::set_data(char *data, size_t data_size)
-{
-    this->data_ = (char*)std::malloc(data_size * sizeof(char));
-    std::memcpy(this->data_, data, data_size);
-}
+    void LytroElement::set_version(int &version)
+    {
+        this->version_ = version;
+    }
 
-std::ostream & operator << (std::ostream& os, const LytroElement& element)
-{
-    os << "LytroElement" << std::endl << "type : " << element.type() << " version : " << element.version() << " length: " << element.length() << std::endl;
-    if (element.sha() != nullptr)
-        os << "sha-1 : " << element.sha() << std::endl;
+    void LytroElement::set_length(int &length)
+    {
+        this->length_ = length;
+    }
 
-    return os;
-}
+    void LytroElement::set_sha(char *sha, size_t sha_size)
+    {
+        uint8_t offset = std::strlen("sha1-");
+        this->sha_ = (char*)std::malloc((sha_size - offset) * sizeof(char));
+        sha += offset;
+        std::memcpy(this->sha_, sha, sha_size);
+    }
+
+    void LytroElement::set_data(char *data, size_t data_size)
+    {
+        this->data_ = (char*)std::malloc(data_size * sizeof(char));
+        std::memcpy(this->data_, data, data_size);
+    }
+
+    std::ostream & operator << (std::ostream& os, const LytroElement& element)
+    {
+        os << "LytroElement" << std::endl << "type : " << element.type() << " version : " << element.version() << " length: " << element.length() << std::endl;
+        if (element.sha() != nullptr)
+            os << "sha-1 : " << element.sha() << std::endl;
+
+        return os;
+    }
+} // namespace lytroio
