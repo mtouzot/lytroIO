@@ -67,7 +67,7 @@ namespace lytroio
 
                     element.set_sha(sha, sizeof(sha));
 
-                    current_position += LYTRO_SHA1;
+                    current_position += LYTRO_SHA1 + LYTRO_SHA1_PADDING;
 
                     file.seekg(current_position, std::ios::beg);
                     size_t padded_length = length + missingBits(length, LYTRO_STEP);

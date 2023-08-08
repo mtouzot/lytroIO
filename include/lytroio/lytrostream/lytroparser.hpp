@@ -27,7 +27,8 @@
 #define LYTRO_HEADER 8
 #define LYTRO_VERSION 4
 #define LYTRO_LENGTH 4
-#define LYTRO_SHA1 80
+#define LYTRO_SHA1 45
+#define LYTRO_SHA1_PADDING 35
 
 namespace lytroio
 {
