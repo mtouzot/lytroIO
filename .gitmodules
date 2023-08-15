@@ -1,3 +1,6 @@
 [submodule "libs/json"]
 	path = libs/nlohmann_json
 	url = https://github.com/nlohmann/json
+[submodule "docs/doxygen-awesome-css"]
+	path = docs/doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css.git
