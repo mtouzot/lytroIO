@@ -427,5 +427,5 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Doxygen output dir
-docs/html
-docs/xml
+html
+xml
