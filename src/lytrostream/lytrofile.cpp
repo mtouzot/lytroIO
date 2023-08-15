@@ -17,7 +17,6 @@ namespace lytroio
 
     bool LytroFile::read()
     {
-        LytroParser parser = LytroParser();
-        return parser.parse(filename_, this->elements_);
+        return LytroParser::parse(filename_, this->elements_);
     }
 } // namespace lytroio

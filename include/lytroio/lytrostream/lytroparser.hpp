@@ -36,25 +36,13 @@ class LytroParser
 {
     public:
         /**
-         * @brief Construct a new Lytro Parser object.
-         *
-         */
-        LytroParser();
-
-        /**
-         * @brief Destroy the Lytro Parser object.
-         *
-         */
-        ~LytroParser();
-
-        /**
          * @brief Parse the Lytro file contents into a vector of LytroElement.
          *
          * @param filepath The filepath to the Lytro file to parse.
          * @param elements Pointer to a vector of LytroElement object contained in the file.
          * @return true if the file have been fully read, false otherwise.
          */
-        bool parse(std::string filepath, std::vector<LytroElement> *elements);
+        static bool parse(std::string filepath, std::vector<LytroElement> *elements);
 };
 } // namespace lytroio
 
