@@ -19,6 +19,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <string>
 
 namespace lytroio
 {
@@ -76,16 +77,16 @@ class LytroElement
         /**
          * @brief Getter of the current LytroElement object sha
          * 
-         * @return const char*
+         * @return const std::string
          */
-        const char* sha() const;
+        const std::string sha() const;
 
         /**
          * @brief Getter of the current LytroElement object data
          * 
-         * @return const char*
+         * @return const std::string
          */
-        const char* data() const;
+        const std::string data() const;
 
         /**
          * @brief Set the version of the current LytroElement object
@@ -105,17 +106,15 @@ class LytroElement
          * @brief Set the sha of the current LytroElement object
          * 
          * @param sha a sha
-         * @param sha_size size of sha
          */
-        void set_sha(char *sha, size_t sha_size);
+        void set_sha(std::string sha);
 
         /**
          * @brief Set the data of the current LytroElement object
          * 
          * @param data a data
-         * @param data_size size of the data
          */
-        void set_data(char *data, size_t data_size);
+        void set_data(std::string data);
 
         /**
          * @brief Override operator << to format LytroElement display
@@ -126,11 +125,11 @@ class LytroElement
         friend std::ostream& operator << (std::ostream &os, const LytroElement &element);
 
     private:
-        LytroHeaderType type_=NUL;
+        LytroHeaderType type_ = NUL;
         int version_ = -1;
         int length_ = -1;
-        char* sha_ = nullptr;
-        char* data_ = nullptr;
+        std::string sha_ = "";
+        std::string data_ = "";
 };
 
 } // namespace lytroio

@@ -51,23 +51,23 @@ namespace lytroio
                     if(length > 0)
                     {
                         file.seekg(current_position, std::ios::beg);
-                        char sha[LYTRO_SHA1];
-                        if(!file.read(sha, sizeof(sha)))
+                        std::string sha(LYTRO_SHA1*sizeof(char), ' ');
+                        if(!file.read(&sha[0], LYTRO_SHA1*sizeof(char)))
                             return false;
 
-                        element.set_sha(sha, sizeof(sha));
+                        element.set_sha(sha);
 
                         current_position += LYTRO_SHA1 + LYTRO_SHA1_PADDING;
 
                         file.seekg(current_position, std::ios::beg);
                         size_t padded_length = length + missingBits(length, LYTRO_STEP);
-                        char* data_buffer = (char*)malloc(sizeof(char) * length);
-                        if(!file.read(data_buffer, length*sizeof(char)))
+                        std::string data(length*sizeof(char), ' ');
+                        if(!file.read(&data[0], length*sizeof(char)))
                             return false;
 
                         current_position += padded_length;
 
-                        element.set_data(data_buffer, length);
+                        element.set_data(data);
                     }
 
                     elements->push_back(element);

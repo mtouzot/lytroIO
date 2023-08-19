@@ -41,12 +41,12 @@ namespace lytroio
         return this->length_;
     }
 
-    const char* LytroElement::sha() const
+    const std::string LytroElement::sha() const
     {
         return this->sha_;
     }
 
-    const char* LytroElement::data() const
+    const std::string LytroElement::data() const
     {
         return this->data_;
     }
@@ -61,24 +61,20 @@ namespace lytroio
         this->length_ = length;
     }
 
-    void LytroElement::set_sha(char *sha, size_t sha_size)
+    void LytroElement::set_sha(std::string sha)
     {
-        uint8_t offset = std::strlen("sha1-");
-        this->sha_ = (char*)std::malloc((sha_size - offset) * sizeof(char));
-        sha += offset;
-        std::memcpy(this->sha_, sha, sha_size);
+        this->sha_ = sha;
     }
 
-    void LytroElement::set_data(char *data, size_t data_size)
+    void LytroElement::set_data(std::string data)
     {
-        this->data_ = (char*)std::malloc(data_size * sizeof(char));
-        std::memcpy(this->data_, data, data_size);
+        this->data_ = data;
     }
 
     std::ostream & operator << (std::ostream& os, const LytroElement& element)
     {
         os << "LytroElement" << std::endl << "type : " << element.type() << " version : " << element.version() << " length: " << element.length() << std::endl;
-        if (element.sha() != nullptr)
+        if (!element.sha().empty())
             os << "sha-1 : " << element.sha() << std::endl;
 
         return os;
