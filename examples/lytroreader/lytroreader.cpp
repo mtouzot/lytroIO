@@ -2,6 +2,7 @@
 // Distributed under the GPL-3.0 Licence (https://opensource.org/license/gpl-3-0/)
 
 #include <lytroio/lytrostream/lytrofile.hpp>
+#include <lytroio/lytrostream/lytroparser.hpp>
 
 #include <fstream>
 #include <iostream>
@@ -25,7 +26,10 @@ int main(int argc, char* argv[])
         std::cout << "Lytro filepath correctly read!" << std::endl;
         for(auto iter_element = lfile.begin(); iter_element != lfile.end(); ++iter_element)
         {
-            std::cout << *iter_element << std::endl << std::endl;
+            std::cout << *iter_element;
+            lytroio::LytroParser::decode(*iter_element);
+            std::cout << std::endl << std::endl;
+
         }
     }
     else
