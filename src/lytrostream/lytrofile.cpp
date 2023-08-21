@@ -19,4 +19,14 @@ namespace lytroio
     {
         return LytroParser::parse(filename_, this->elements_);
     }
+
+    void LytroFile::decode()
+    {
+        for(auto iter_element = this->begin(); iter_element != this->end(); ++iter_element)
+        {
+            std::cout << std::endl << "Decoding " << iter_element->type() << std::endl;
+            LytroParser::decode(*iter_element);
+            std::cout << std::endl;
+        }
+    }
 } // namespace lytroio

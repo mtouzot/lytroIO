@@ -56,6 +56,7 @@ class LytroFile
         ~LytroFile();
 
         bool read();
+        void decode();
 
     private:
         std::string filename_;

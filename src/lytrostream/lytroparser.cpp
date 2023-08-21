@@ -1,11 +1,14 @@
 // Copyright (c) 2023-present, Martin TOUZOT & LytroIO contributors.
 // Distributed under the GPL-3.0 Licence (https://opensource.org/license/gpl-3-0/)
 
+#include <nlohmann/json.hpp>
 #include <lytroio/lytrostream/lytroparser.hpp>
 #include "utils.hpp"
 
 namespace lytroio
 {
+    using json = nlohmann::json;
+
     bool LytroParser::parse(std::string filepath, std::vector<LytroElement> *elements)
     {
         std::string_view lfp_header{"\x89\x4c\x46\x50\x0D\x0A\x1A\x0A"};
@@ -76,5 +79,24 @@ namespace lytroio
 
         file.close();
         return true;
+    }
+
+    void LytroParser::decode(LytroElement element)
+    {
+        if(!element.data().empty())
+        {
+            if (json::accept(element.data()))
+            {
+                std::cout << "LytroElement can be decoded as JSON" << std::endl;
+            }
+            else if(string_to_hex(element.data().substr(0, 4)).compare("FFD8FFE1") == 0)
+            {
+                std::cout << "LytroElement can be decoded as JPEG" << std::endl;
+            }
+        }
+        else
+        {
+            std::cout << "LytroElement contains no data" << std::endl;
+        }
     }
 } // namespace lytroio

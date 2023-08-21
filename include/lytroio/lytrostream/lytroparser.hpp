@@ -43,6 +43,13 @@ class LytroParser
          * @return true if the file have been fully read, false otherwise.
          */
         static bool parse(std::string filepath, std::vector<LytroElement> *elements);
+
+        /**
+         * @brief Decode LytroElement data to human readable data
+         *
+         * @param element Pointer to LytroElement to decode
+         */
+        static void decode(LytroElement element);
 };
 } // namespace lytroio
 
