@@ -8,7 +8,7 @@
 
 #include <string>
 
-std::string string_to_hex(const std::string& input)
+inline std::string string_to_hex(const std::string& input)
 {
     static const char hex_digits[] = "0123456789ABCDEF";
 
@@ -23,7 +23,7 @@ std::string string_to_hex(const std::string& input)
     return output;
 }
 
-int bitsToInt(char* bits, size_t blockSize, int offset = 0)
+inline int bitsToInt(char* bits, size_t blockSize, int offset = 0)
 {
     int res = 0;
     for(size_t idx = 0; idx < blockSize; idx++)
@@ -33,7 +33,7 @@ int bitsToInt(char* bits, size_t blockSize, int offset = 0)
     return res;
 }
 
-int missingBits(size_t length, size_t blockLength)
+inline int missingBits(size_t length, size_t blockLength)
 {
     return (length % blockLength != 0) ? blockLength - length % blockLength : 0;
 }
