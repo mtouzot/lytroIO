@@ -2,7 +2,7 @@
 // Distributed under the GPL-3.0 Licence (https://opensource.org/license/gpl-3-0/)
 
 #include <lytroio/lytrostream/lytrofile.hpp>
-#include <lytroio/lytrostream/lytroparser.hpp>
+#include <lytroio/lytrostream/lytrodecoder.hpp>
 
 #include <fstream>
 #include <iostream>
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
         for(auto iter_element = lfile.begin(); iter_element != lfile.end(); ++iter_element)
         {
             std::cout << *iter_element;
-            lytroio::LytroParser::decode(*iter_element);
+            lytroio::LytroDecoder::decode(*iter_element);
             std::cout << std::endl << std::endl;
 
         }
