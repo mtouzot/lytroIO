@@ -93,7 +93,7 @@ namespace lytroio
         for(auto iter_element = this->begin(); iter_element != this->end(); ++iter_element)
         {
             std::cout << std::endl << "Decoding " << iter_element->type() << std::endl;
-            LytroDecoder::decode(*iter_element);
+            LytroDecoder::decode(&*iter_element);
             std::cout << std::endl;
         }
     }

@@ -32,7 +32,7 @@ class LytroDecoder
          *
          * @param element Pointer to LytroElement to decode
          */
-        static void decode(LytroElement element);
+        static void decode(LytroElement *element);
 };
 } // namespace lytroio
 

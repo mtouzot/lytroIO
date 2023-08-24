@@ -9,15 +9,15 @@ namespace lytroio
 {
     using json = nlohmann::json;
 
-    void LytroDecoder::decode(LytroElement element)
+    void LytroDecoder::decode(LytroElement *element)
     {
-        if(!element.data().empty())
+        if(!element->data().empty())
         {
-            if (json::accept(element.data()))
+            if (json::accept(element->data()))
             {
                 std::cout << "LytroElement can be decoded as JSON" << std::endl;
             }
-            else if(string_to_hex(element.data().substr(0, 4)).compare("FFD8FFE1") == 0)
+            else if(string_to_hex(element->data().substr(0, 4)).compare("FFD8FFE1") == 0)
             {
                 std::cout << "LytroElement can be decoded as JPEG" << std::endl;
             }
