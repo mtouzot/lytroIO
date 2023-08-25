@@ -20,7 +20,7 @@
 #define LYTRODECODER_H
 
 #include <lytroio/lytrostream/lytroelement.hpp>
-#include <vector>
+#include <fstream>
 
 namespace lytroio
 {
@@ -32,7 +32,10 @@ class LytroDecoder
          *
          * @param element Pointer to LytroElement to decode
          */
-        static void decode(LytroElement *element);
+        void decode(LytroElement *element);
+
+    private:
+        void decode_image(LytroElement *element);
 };
 } // namespace lytroio
 

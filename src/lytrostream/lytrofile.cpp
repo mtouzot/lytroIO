@@ -9,11 +9,13 @@ namespace lytroio
     LytroFile::LytroFile(std::string filename) : filename_(filename)
     {
         elements_ = new std::vector<LytroElement>();
+        ldecoder_ = new LytroDecoder();
     }
 
     LytroFile::~LytroFile()
     {
         delete elements_;
+        delete ldecoder_;
     }
 
     bool LytroFile::read()
@@ -93,7 +95,7 @@ namespace lytroio
         for(auto iter_element = this->begin(); iter_element != this->end(); ++iter_element)
         {
             std::cout << std::endl << "Decoding " << iter_element->type() << std::endl;
-            LytroDecoder::decode(&*iter_element);
+            this->ldecoder_->decode(&*iter_element);
             std::cout << std::endl;
         }
     }

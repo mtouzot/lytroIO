@@ -69,6 +69,7 @@ class LytroFile
     private:
         std::string filename_;
         std::vector<LytroElement> *elements_;
+        LytroDecoder *ldecoder_;
 };
 } // namespace lytroio
 
