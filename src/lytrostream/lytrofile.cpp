@@ -92,11 +92,13 @@ namespace lytroio
 
     void LytroFile::decode()
     {
+        int element_idx = 0;
         for(auto iter_element = this->begin(); iter_element != this->end(); ++iter_element)
         {
             std::cout << std::endl << "Decoding " << iter_element->type() << std::endl;
-            this->ldecoder_->decode(&*iter_element);
+            this->ldecoder_->decode(&*iter_element, element_idx);
             std::cout << std::endl;
+            element_idx++;
         }
     }
 } // namespace lytroio

@@ -9,18 +9,25 @@ namespace lytroio
 {
     using json = nlohmann::json;
 
-    void LytroDecoder::decode(LytroElement *element)
+    void LytroDecoder::decode(LytroElement *element, int element_idx)
     {
         if(!element->data().empty())
         {
+            size_t begin = 0;
+            size_t end = 0;
             if (json::accept(element->data()))
             {
                 std::cout << "LytroElement can be decoded as JSON" << std::endl;
             }
-            else if(string_to_hex(element->data().substr(0, 4)).compare("FFD8FFE1") == 0)
+            else if (contains_jpeg(element->data(), begin, end))
             {
                 std::cout << "LytroElement can be decoded as JPEG" << std::endl;
-                this->decode_image(element);
+                std::string filepath = "image_" + std::to_string(element_idx) + ".jpeg";
+                decode_image(filepath, element->data(), begin, end);
+            }
+            else
+            {
+                std::cout << "TODO" << std::endl;
             }
         }
         else
@@ -29,11 +36,28 @@ namespace lytroio
         }
     }
 
-    void LytroDecoder::decode_image(LytroElement *element)
+    void LytroDecoder::decode_image(std::string filepath, std::string data, size_t begin, size_t end)
     {
-        std::cout << "Image data found in " << *element;
-        std::ofstream image("depth_image.jpeg", std::ofstream::out | std::ofstream::binary);
-        image << element->data();
+        std::ofstream image(filepath, std::ofstream::out | std::ofstream::binary);
+        image << data;
         image.close();
+    }
+
+    bool LytroDecoder::contains_json(std::string data)
+    {
+        return json::accept(data);
+    }
+
+    bool LytroDecoder::contains_jpeg(std::string data, size_t &begin, size_t &end)
+    {
+        begin = string_to_hex(data).find("FFD8");
+        end = string_to_hex(data).find("FFD9");
+
+        if((begin!=std::string::npos) && (end!=std::string::npos))
+        {
+            end += 4;
+            return true;
+        }
+        return false;
     }
 } // namespace lytroio
