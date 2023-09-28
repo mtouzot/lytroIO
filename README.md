@@ -1,4 +1,7 @@
-# lytroIO
+# lytroIO 
+
+> [!IMPORTANT]
+> This repo is still under development.
 
 > lytroIO aims to be a small C++ library to process Lytro files (extracting metadatas, saving images,... )
 
