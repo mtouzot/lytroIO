@@ -25,6 +25,12 @@ namespace lytroio
                 std::string filepath = "image_" + std::to_string(element_idx) + ".jpeg";
                 decode_image(filepath, element->data(), begin, end);
             }
+            else if (contains_png(element->data(), begin))
+            {
+                std::cout << "LytroElement can be decoded as PNG" << std::endl;
+                std::string filepath = "image_" + std::to_string(element_idx) + ".png";
+                decode_image(filepath, element->data(), begin, 0);
+            }
             else
             {
                 std::cout << "TODO" << std::endl;
@@ -50,9 +56,9 @@ namespace lytroio
 
     bool LytroDecoder::contains_jpeg(std::string data, size_t &begin, size_t &end)
     {
-        begin = string_to_hex(data).find("FFD8");
-        end = string_to_hex(data).find("FFD9");
-        int middle = string_to_hex(data).find("FFDA");
+        begin = string_to_hex(data).find("FFD8"); // JFIF file structure Start of Image
+        end = string_to_hex(data).find("FFD9"); // JFIF file structure End of Image
+        int middle = string_to_hex(data).find("FFDA"); // JFIF file structure Start of Scan
 
         if((begin!=std::string::npos) && (end!=std::string::npos) && ((begin < middle) && (middle < end)))
         {
@@ -60,5 +66,12 @@ namespace lytroio
             return true;
         }
         return false;
+    }
+
+    bool LytroDecoder::contains_png(std::string data, size_t &begin)
+    {
+        begin = string_to_hex(data).find("89504E470D0A1A0A"); // PNG hexadecimal file signature
+
+        return (begin!=std::string::npos);
     }
 } // namespace lytroio

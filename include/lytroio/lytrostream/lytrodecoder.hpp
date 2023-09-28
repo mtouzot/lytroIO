@@ -60,6 +60,15 @@ class LytroDecoder
          * @return true if LytroElement's data contains jpeg, false otherwire
          */
         bool contains_jpeg(std::string data, size_t &begin, size_t &end);
+
+        /**
+         * @brief Check if LytroElement's data contains png and where
+         *
+         * @param data Data to check
+         * @param begin Start of image
+         * @return true if LytroElement's data contains png, false otherwire
+         */
+        bool contains_png(std::string data, size_t &begin);
 };
 } // namespace lytroio
 
