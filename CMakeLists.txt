@@ -142,7 +142,7 @@ endif(BUILD_EXAMPLES)
 # Doxygen config
 #------------------------------------------------------------
 
-option(BUILD_DOCS "Build documentation" OFF)
+option(BUILD_DOCS "Build documentation" ON)
 
 if(BUILD_DOCS)
     # Check if Doxygen is installed
