@@ -52,8 +52,9 @@ namespace lytroio
     {
         begin = string_to_hex(data).find("FFD8");
         end = string_to_hex(data).find("FFD9");
+        int middle = string_to_hex(data).find("FFDA");
 
-        if((begin!=std::string::npos) && (end!=std::string::npos))
+        if((begin!=std::string::npos) && (end!=std::string::npos) && ((begin < middle) && (middle < end)))
         {
             end += 4;
             return true;
