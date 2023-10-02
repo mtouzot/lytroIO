@@ -35,6 +35,7 @@ jobs:
         -B ${{github.workspace}}/build 
         -S .
         -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        -DBUILD_DOCS=ON
 
     - name: CMake build
       run:  >
