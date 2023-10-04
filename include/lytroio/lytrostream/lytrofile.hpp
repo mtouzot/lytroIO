@@ -44,7 +44,7 @@ class LytroFile
             using pointer           = LytroElement*;
             using reference         = LytroElement&;
 
-            LytroIterator(pointer ptr) : m_ptr(ptr) {}
+            LytroIterator(pointer ptr) : m_ptr(ptr) {};
 
             reference operator*() const { return *m_ptr; }
             pointer operator->() { return m_ptr; }
