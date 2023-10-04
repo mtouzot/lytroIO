@@ -18,9 +18,17 @@
 #define LYTROFILE_H
 
 #include <lytroio/lytrostream/lytroelement.hpp>
-#include <lytroio/lytrostream/lytroparser.hpp>
+#include <lytroio/lytrostream/lytrodecoder.hpp>
+#include <fstream>
 #include <vector>
 #include <iterator>
+
+#define LYTRO_STEP 16
+#define LYTRO_HEADER 8
+#define LYTRO_VERSION 4
+#define LYTRO_LENGTH 4
+#define LYTRO_SHA1 45
+#define LYTRO_SHA1_PADDING 35
 
 namespace lytroio
 {
@@ -36,7 +44,7 @@ class LytroFile
             using pointer           = LytroElement*;
             using reference         = LytroElement&;
 
-            LytroIterator(pointer ptr) : m_ptr(ptr) {}
+            LytroIterator(pointer ptr) : m_ptr(ptr) {};
 
             reference operator*() const { return *m_ptr; }
             pointer operator->() { return m_ptr; }
@@ -56,10 +64,12 @@ class LytroFile
         ~LytroFile();
 
         bool read();
+        void decode();
 
     private:
         std::string filename_;
         std::vector<LytroElement> *elements_;
+        LytroDecoder *ldecoder_;
 };
 } // namespace lytroio
 

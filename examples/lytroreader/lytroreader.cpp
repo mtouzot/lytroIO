@@ -23,10 +23,7 @@ int main(int argc, char* argv[])
     if(lfile.read() == true)
     {
         std::cout << "Lytro filepath correctly read!" << std::endl;
-        for(auto iter_element = lfile.begin(); iter_element != lfile.end(); ++iter_element)
-        {
-            std::cout << *iter_element << std::endl << std::endl;
-        }
+        lfile.decode();
     }
     else
         std::cout << "Lytro filepath unreadable..." << std::endl;

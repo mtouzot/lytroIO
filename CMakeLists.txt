@@ -50,7 +50,7 @@ endif()
 
 # Define your library sources
 set(PUBLIC_HEADERS
-    include/lytroio/lytrostream/lytroparser.hpp
+    include/lytroio/lytrostream/lytrodecoder.hpp
     include/lytroio/lytrostream/lytroelement.hpp
     include/lytroio/lytrostream/lytrofile.hpp
 )
@@ -60,7 +60,7 @@ set(PRIVATE_HEADERS
 )
 
 set(SOURCES
-    src/lytrostream/lytroparser.cpp
+    src/lytrostream/lytrodecoder.cpp
     src/lytrostream/lytroelement.cpp
     src/lytrostream/lytrofile.cpp
 )
