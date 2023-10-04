@@ -1,0 +1,6 @@
+repos:
+    - repo: https://github.com/cpp-linter/cpp-linter-hooks
+      rev: v0.2.4
+      hooks:
+        - id: clang-format
+          args: [--style=GNU]
