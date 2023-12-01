@@ -21,8 +21,8 @@
 
 #include <fstream>
 #include <iterator>
-#include <lytroio\lytrostream\lytrodecoder.hpp>
-#include <lytroio\lytrostream\lytroelement.hpp>
+#include <lytroio/lytrostream/lytrodecoder.hpp>
+#include <lytroio/lytrostream/lytroelement.hpp>
 #include <vector>
 
 #define LYTRO_STEP 16

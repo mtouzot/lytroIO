@@ -3,7 +3,7 @@
 // (https://opensource.org/license/gpl-3-0/)
 
 #include "utils.hpp"
-#include <lytroio\lytrostream\lytrofile.hpp>
+#include <lytroio/lytrostream/lytrofile.hpp>
 
 namespace lytroio
 {

@@ -21,7 +21,7 @@
 #define LYTRODECODER_H
 
 #include <fstream>
-#include <lytroio\lytrostream\lytroelement.hpp>
+#include <lytroio/lytrostream/lytroelement.hpp>
 
 namespace lytroio
 {
