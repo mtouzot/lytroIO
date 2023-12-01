@@ -25,6 +25,16 @@ Image taken with a Lytro Illum by Doodybutch, published under [CC BY-SA 4.0 lice
 
 Image taken with a Lytro camera animated by [Christopher Hahne](http://www.christopherhahne.de/), published under [GNU General Public License version 3 license](https://opensource.org/license/gpl-3-0) for his [PlenoptiCam](https://github.com/hahnec/plenopticam) software.
 
+# Compilation
+
+Here are the commands to compile this project :
+```console
+cd <lytroio_build_directory>
+cmake -G <cmake_generator> -DBUILD_EXAMPLES=<ON/OFF> -DBUILD_DOCS=<ON/OFF> <lytroio_source_directory>
+cmake --build . --config <cfg>
+```
+By default, **BUILD_EXAMPLES** and **BUILD_DOCS** are set to **OFF**.
+
 # External ressources
 
 Here is some further reading or other projects : 
