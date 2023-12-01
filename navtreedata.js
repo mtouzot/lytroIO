@@ -26,7 +26,8 @@ var NAVTREE =
 [
   [ "lytroio", "index.html", [
     [ "Description", "index.html#autotoc_md1", null ],
-    [ "External ressources", "index.html#autotoc_md2", null ],
+    [ "Compilation", "index.html#autotoc_md2", null ],
+    [ "External ressources", "index.html#autotoc_md3", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

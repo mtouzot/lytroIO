@@ -132,6 +132,12 @@ Description</h1>
 <p><img src="https://raw.githubusercontent.com/hahnec/color-matcher/master/tests/data/view_animation_7px.gif" alt="" align="center" class="inline"/></p>
 <p>Image taken with a Lytro camera animated by <a href="http://www.christopherhahne.de/">Christopher Hahne</a>, published under <a href="https://opensource.org/license/gpl-3-0">GNU General Public License version 3 license</a> for his <a href="https://github.com/hahnec/plenopticam">PlenoptiCam</a> software.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
+Compilation</h1>
+<p>Here are the commands to compile this project : </p><div class="fragment"><div class="line">cd &lt;lytroio_build_directory&gt;</div>
+<div class="line">cmake -G &lt;cmake_generator&gt; -DBUILD_EXAMPLES=&lt;ON/OFF&gt; -DBUILD_DOCS=&lt;ON/OFF&gt; &lt;lytroio_source_directory&gt;</div>
+<div class="line">cmake --build . --config &lt;cfg&gt;</div>
+</div><!-- fragment --><p> By default, <b>BUILD_EXAMPLES</b> and <b>BUILD_DOCS</b> are set to <b>OFF</b>.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
 External ressources</h1>
 <p>Here is some further reading or other projects :</p><ul>
 <li><a href="https://github.com/nrpatel/lfptools">lfptools</a> : a C tool to split Lytro files</li>
