@@ -6,7 +6,7 @@
 
 namespace lytroio
 {
-LytroElement::LytroElement (enum LytroElement::LytroHeaderType type)
+LytroElement::LytroElement (enum LytroElement::LytroElementType type)
     : type_ (type)
 {
 }
@@ -18,13 +18,13 @@ LytroElement::type () const
 {
   switch (this->type_)
     {
-    case LytroElement::LytroHeaderType::LFP:
+    case LytroElement::LytroElementType::LFP:
       return "LFP";
-    case LytroElement::LytroHeaderType::LFC:
+    case LytroElement::LytroElementType::LFC:
       return "LFC";
-    case LytroElement::LytroHeaderType::LFM:
+    case LytroElement::LytroElementType::LFM:
       return "LFM";
-    case LytroElement::LytroHeaderType::NUL:
+    case LytroElement::LytroElementType::NUL:
     default:
       return "NUL";
     }

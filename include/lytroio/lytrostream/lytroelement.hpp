@@ -28,7 +28,7 @@ namespace lytroio
 class LytroElement
 {
 public:
-  enum LytroHeaderType : int8_t
+  enum LytroElementType : int8_t
   {
     NUL = -1,
     LFM = 3,
@@ -47,7 +47,7 @@ public:
    *
    * @param type type of the LytroElement object
    */
-  LytroElement (enum LytroElement::LytroHeaderType type);
+  LytroElement (enum LytroElement::LytroElementType type);
 
   /**
    * @brief Destroy the LytroElement object
@@ -128,7 +128,7 @@ public:
                                    const LytroElement &element);
 
 private:
-  LytroHeaderType type_ = NUL;
+  LytroElementType type_ = NUL;
   int version_ = -1;
   int length_ = -1;
   std::string sha_ = "";

@@ -53,7 +53,7 @@ LytroFile::read ()
       if (cmp_lfp == 0 || cmp_lfm == 0 || cmp_lfc == 0)
         {
           LytroElement element = LytroElement (
-              static_cast<LytroElement::LytroHeaderType> (type));
+              static_cast<LytroElement::LytroElementType> (type));
 
           current_position += LYTRO_HEADER;
           file.seekg (current_position, std::ios::beg);
