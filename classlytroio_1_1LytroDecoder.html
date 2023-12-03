@@ -119,6 +119,12 @@ $(document).ready(function(){initNavTree('classlytroio_1_1LytroDecoder.html','')
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8fcf6600e0f3e29bb56670b87e87eda1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1">read</a> (std::string data_buffer)</td></tr>
+<tr class="memdesc:a8fcf6600e0f3e29bb56670b87e87eda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all buffer to construct a pointer to a vector of <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>.  <a href="classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1">More...</a><br /></td></tr>
+<tr class="separator:a8fcf6600e0f3e29bb56670b87e87eda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888661c139b75d5bdd5f47c8cd02610e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e">read_next_element</a> (std::string data_buffer, size_t &amp;pos)</td></tr>
+<tr class="memdesc:a888661c139b75d5bdd5f47c8cd02610e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the buffer from position indexed by pos to construct a <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>.  <a href="classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e">More...</a><br /></td></tr>
+<tr class="separator:a888661c139b75d5bdd5f47c8cd02610e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7aa10d59cf45bcbff747c6abb043b29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29">decode</a> (<a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> *element, int element_idx)</td></tr>
 <tr class="memdesc:ac7aa10d59cf45bcbff747c6abb043b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> data to human readable data.  <a href="classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29">More...</a><br /></td></tr>
 <tr class="separator:ac7aa10d59cf45bcbff747c6abb043b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +163,58 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8fcf6600e0f3e29bb56670b87e87eda1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fcf6600e0f3e29bb56670b87e87eda1">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>&gt;* lytroio::LytroDecoder::read </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>data_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read all buffer to construct a pointer to a vector of <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to a vector of <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> </dd></dl>
+
+</div>
+</div>
+<a id="a888661c139b75d5bdd5f47c8cd02610e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888661c139b75d5bdd5f47c8cd02610e">&#9670;&nbsp;</a></span>read_next_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> lytroio::LytroDecoder::read_next_element </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>data_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the buffer from position indexed by pos to construct a <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> </dd></dl>
 
 </div>
 </div>
