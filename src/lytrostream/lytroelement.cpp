@@ -55,6 +55,12 @@ LytroElement::data () const
 }
 
 void
+LytroElement::set_type (enum LytroElement::LytroElementType type)
+{
+  this->type_ = type;
+}
+
+void
 LytroElement::set_version (int &version)
 {
   this->version_ = version;

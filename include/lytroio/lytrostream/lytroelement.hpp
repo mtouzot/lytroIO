@@ -91,6 +91,13 @@ public:
   const std::string data () const;
 
   /**
+   * @brief Set the type of the current LytroElement object
+   *
+   * @param type type of the LytroElement object
+   */
+  void set_type (enum LytroElement::LytroElementType type);
+
+  /**
    * @brief Set the version of the current LytroElement object
    *
    * @param version a version number
