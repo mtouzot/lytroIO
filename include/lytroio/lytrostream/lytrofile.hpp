@@ -94,7 +94,7 @@ public:
   LytroIterator
   end ()
   {
-    return LytroIterator (&elements_->back ());
+    return ++(LytroIterator (&elements_->back ()));
   }
 
   LytroFile (std::string filename);
