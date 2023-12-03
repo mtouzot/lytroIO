@@ -10,6 +10,55 @@ namespace lytroio
 {
 using json = nlohmann::json;
 
+std::vector<LytroElement> *
+LytroDecoder::read (std::string data_buffer)
+{
+  std::vector<LytroElement> *elements = new std::vector<LytroElement> ();
+  size_t current_position = 0;
+
+  while (current_position < data_buffer.length ())
+    {
+      elements->push_back (read_next_element (data_buffer, current_position));
+    }
+  return elements;
+}
+
+LytroElement
+LytroDecoder::read_next_element (std::string data_buffer, size_t &pos)
+{
+  LytroElement element = LytroElement ();
+  std::string header_type = data_buffer.substr (pos, LYTRO_HEADER);
+  pos += LYTRO_HEADER;
+  element.set_type (allowed_headers_[header_type]);
+
+  // version
+  std::string version_str = data_buffer.substr (pos, LYTRO_VERSION);
+  int version = bitsToInt (&version_str[0], LYTRO_VERSION);
+  pos += LYTRO_VERSION;
+  element.set_version (version);
+
+  // lenght
+  std::string length_str = data_buffer.substr (pos, LYTRO_LENGTH);
+  int length = bitsToInt (&length_str[0], LYTRO_LENGTH);
+  pos += LYTRO_LENGTH;
+  element.set_length (length);
+
+  if (length > 0)
+    {
+      // SHA-1
+      std::string sha_str = data_buffer.substr (pos, LYTRO_SHA1);
+      pos += LYTRO_SHA1 + LYTRO_SHA1_PADDING;
+      element.set_sha (sha_str);
+
+      // data
+      std::string data_str = data_buffer.substr (pos, element.length ());
+      pos += length + missingBits (length, LYTRO_STEP);
+      element.set_data (data_str);
+    }
+
+  return element;
+}
+
 void
 LytroDecoder::decode (LytroElement *element, int element_idx)
 {

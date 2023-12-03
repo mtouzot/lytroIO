@@ -22,12 +22,39 @@
 
 #include <fstream>
 #include <lytroio/lytrostream/lytroelement.hpp>
+#include <map>
+#include <vector>
+
+#define LYTRO_STEP 16
+#define LYTRO_HEADER 8
+#define LYTRO_VERSION 4
+#define LYTRO_LENGTH 4
+#define LYTRO_SHA1 45
+#define LYTRO_SHA1_PADDING 35
 
 namespace lytroio
 {
 class LytroDecoder
 {
+  typedef std::map<std::string_view, LytroElement::LytroElementType>
+      LytroHeaderType_t;
+
 public:
+  /**
+   * @brief Read all buffer to construct a pointer to a vector of LytroElement
+   *
+   * @return a pointer to a vector of LytroElement
+   */
+  std::vector<LytroElement> *read (std::string data_buffer);
+
+  /**
+   * @brief Read the buffer from position indexed by pos to construct a
+   * LytroElement
+   *
+   * @return a LytroElement
+   */
+  LytroElement read_next_element (std::string data_buffer, size_t &pos);
+
   /**
    * @brief Decode LytroElement data to human readable data
    *
@@ -71,6 +98,14 @@ private:
    * @return true if LytroElement's data contains png, false otherwire
    */
   bool contains_png (std::string data, size_t &begin);
+
+  LytroHeaderType_t allowed_headers_
+      = { { "\x89\x4c\x46\x50\x0D\x0A\x1A\x0A",
+            LytroElement::LytroElementType::LFP },
+          { "\x89\x4c\x46\x43\x0D\x0A\x1A\x0A",
+            LytroElement::LytroElementType::LFC },
+          { "\x89\x4c\x46\x4D\x0D\x0A\x1A\x0A",
+            LytroElement::LytroElementType::LFM } };
 };
 } // namespace lytroio
 
