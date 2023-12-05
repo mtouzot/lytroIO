@@ -75,14 +75,12 @@ LytroDecoder::decode (LytroElement *element, int element_idx)
           std::cout << "LytroElement can be decoded as JPEG" << std::endl;
           std::string filepath
               = "image_" + std::to_string (element_idx) + ".jpeg";
-          decode_image (filepath, element->data (), begin, end);
         }
       else if (contains_png (element->data (), begin))
         {
           std::cout << "LytroElement can be decoded as PNG" << std::endl;
           std::string filepath
               = "image_" + std::to_string (element_idx) + ".png";
-          decode_image (filepath, element->data (), begin, 0);
         }
       else
         {
@@ -93,15 +91,6 @@ LytroDecoder::decode (LytroElement *element, int element_idx)
     {
       std::cout << "LytroElement contains no data" << std::endl;
     }
-}
-
-void
-LytroDecoder::decode_image (std::string filepath, std::string data,
-                            size_t begin, size_t end)
-{
-  std::ofstream image (filepath, std::ofstream::out | std::ofstream::binary);
-  image << data;
-  image.close ();
 }
 
 bool

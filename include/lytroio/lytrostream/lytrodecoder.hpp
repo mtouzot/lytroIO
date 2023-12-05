@@ -64,15 +64,6 @@ public:
 
 private:
   /**
-   * @brief Decode data from LytroElement and save it as an image
-   *
-   * @param data Data from the LytroElement
-   * @param filepath Filepath of the image to be saved
-   */
-  void decode_image (std::string filepath, std::string data, size_t begin,
-                     size_t end);
-
-  /**
    * @brief Check if LytroElement's data contains json
    *
    * @param data Data to check
