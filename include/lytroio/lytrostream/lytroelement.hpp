@@ -126,6 +126,14 @@ public:
   void set_data (std::string data);
 
   /**
+   * @brief Check if current LytroElement is empty ie. length == 0
+   *
+   * @return true Current LytroElement contains no data
+   * @return false Current LytroElement contains data
+   */
+  bool empty ();
+
+  /**
    * @brief Override operator << to format LytroElement display
    *
    * @param os output stream

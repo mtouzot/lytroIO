@@ -84,6 +84,12 @@ LytroElement::set_data (std::string data)
   this->data_ = data;
 }
 
+bool
+LytroElement::empty ()
+{
+  return (this->length_ == 0);
+}
+
 std::ostream &
 operator<< (std::ostream &os, const LytroElement &element)
 {
