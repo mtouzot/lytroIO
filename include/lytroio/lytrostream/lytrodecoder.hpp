@@ -20,6 +20,7 @@
 #ifndef LYTRODECODER_H
 #define LYTRODECODER_H
 
+#include <filesystem>
 #include <fstream>
 #include <lytroio/lytrostream/lytroelement.hpp>
 #include <map>
@@ -45,7 +46,8 @@ public:
    *
    * @return a pointer to a vector of LytroElement
    */
-  std::vector<LytroElement> *read (std::string data_buffer);
+  std::vector<LytroElement> *read (std::string data_buffer,
+                                   std::filesystem::path data_filepath = "");
 
   /**
    * @brief Read the buffer from position indexed by pos to construct a
@@ -53,7 +55,8 @@ public:
    *
    * @return a LytroElement
    */
-  LytroElement read_next_element (std::string data_buffer, size_t &pos);
+  LytroElement read_next_element (std::string data_buffer, size_t &pos,
+                                  std::filesystem::path data_filepath = "");
 
   /**
    * @brief Decode LytroElement data to human readable data

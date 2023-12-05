@@ -36,7 +36,7 @@ LytroFile::read ()
   file.read (&data_buffer_temp[0], len);
   file.close ();
 
-  this->elements_ = this->ldecoder_->read (data_buffer_temp);
+  this->elements_ = this->ldecoder_->read (data_buffer_temp, this->filename_);
 
   return (this->elements_->front ().type () == "LFP");
 }

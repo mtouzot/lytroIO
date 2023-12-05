@@ -7,6 +7,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#include <filesystem>
 #include <string>
 
 inline std::string
@@ -44,4 +45,9 @@ missingBits (size_t length, size_t blockLength)
   return (length % blockLength != 0) ? blockLength - length % blockLength : 0;
 }
 
+inline std::filesystem::path
+pathstem (std::filesystem::path filepath)
+{
+  return filepath.parent_path ().append (filepath.stem ().string ());
+}
 #endif // UTILS_H

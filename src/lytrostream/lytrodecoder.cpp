@@ -11,22 +11,27 @@ namespace lytroio
 using json = nlohmann::json;
 
 std::vector<LytroElement> *
-LytroDecoder::read (std::string data_buffer)
+LytroDecoder::read (std::string data_buffer,
+                    std::filesystem::path data_filepath)
 {
   std::vector<LytroElement> *elements = new std::vector<LytroElement> ();
-  size_t current_position = 0;
+  size_t position_in_buffer = 0;
 
-  while (current_position < data_buffer.length ())
+  while (position_in_buffer < data_buffer.length ())
     {
-      elements->push_back (read_next_element (data_buffer, current_position));
+      elements->push_back (
+          read_next_element (data_buffer, position_in_buffer, data_filepath));
     }
   return elements;
 }
 
 LytroElement
-LytroDecoder::read_next_element (std::string data_buffer, size_t &pos)
+LytroDecoder::read_next_element (std::string data_buffer, size_t &pos,
+                                 std::filesystem::path data_filepath)
 {
   LytroElement element = LytroElement ();
+  element.set_parent_filepath (data_filepath);
+
   std::string header_type = data_buffer.substr (pos, LYTRO_HEADER);
   pos += LYTRO_HEADER;
   element.set_type (allowed_headers_[header_type]);
@@ -66,26 +71,34 @@ LytroDecoder::decode (LytroElement *element, int element_idx)
     {
       size_t begin = 0;
       size_t end = 0;
-      if (json::accept (element->data ()))
+      std::filesystem::path filepath = "";
+      if (contains_json (element->data ()))
         {
           std::cout << "LytroElement can be decoded as JSON" << std::endl;
+          filepath = pathstem (element->parent_filepath ())
+                         .concat ("_metadata_" + std::to_string (element_idx)
+                                  + ".json");
         }
       else if (contains_jpeg (element->data (), begin, end))
         {
           std::cout << "LytroElement can be decoded as JPEG" << std::endl;
-          std::string filepath
-              = "image_" + std::to_string (element_idx) + ".jpeg";
+          filepath = pathstem (element->parent_filepath ())
+                         .concat ("image_" + std::to_string (element_idx)
+                                  + ".jpeg");
         }
       else if (contains_png (element->data (), begin))
         {
           std::cout << "LytroElement can be decoded as PNG" << std::endl;
-          std::string filepath
-              = "image_" + std::to_string (element_idx) + ".png";
+          filepath
+              = pathstem (element->parent_filepath ())
+                    .concat ("image_" + std::to_string (element_idx) + ".png");
         }
       else
         {
           std::cout << "TODO" << std::endl;
         }
+
+      element->set_filepath (filepath);
     }
   else
     {
