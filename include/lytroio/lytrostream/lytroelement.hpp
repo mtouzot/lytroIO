@@ -20,6 +20,7 @@
 #define LYTROELEMENT_H
 
 #include <cstring>
+#include <filesystem>
 #include <iostream>
 #include <string>
 
@@ -91,6 +92,20 @@ public:
   const std::string data () const;
 
   /**
+   * @brief Getter of the current LytroElement object filepath
+   *
+   * @return const std::filesystem::path
+   */
+  const std::filesystem::path filepath () const;
+
+  /**
+   * @brief Getter of the current LytroElement object parent filepath
+   *
+   * @return const std::filesystem::path
+   */
+  const std::filesystem::path parent_filepath () const;
+
+  /**
    * @brief Set the type of the current LytroElement object
    *
    * @param type type of the LytroElement object
@@ -126,6 +141,20 @@ public:
   void set_data (std::string data);
 
   /**
+   * @brief Set the filepath of the current LytroElement object
+   *
+   * @param filepath a filepath
+   */
+  void set_filepath (std::filesystem::path filepath);
+
+  /**
+   * @brief Set the parent filepath of the current LytroElement object
+   *
+   * @param parent_filepath a parent_filepath
+   */
+  void set_parent_filepath (std::filesystem::path parent_filepath);
+
+  /**
    * @brief Check if current LytroElement is empty ie. length == 0
    *
    * @return true Current LytroElement contains no data
@@ -148,6 +177,8 @@ private:
   int length_ = -1;
   std::string sha_ = "";
   std::string data_ = "";
+  std::filesystem::path filepath_ = "";
+  std::filesystem::path parent_filepath_ = "";
 };
 
 } // namespace lytroio
