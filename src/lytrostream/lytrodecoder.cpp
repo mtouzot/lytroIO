@@ -83,15 +83,15 @@ LytroDecoder::decode (LytroElement *element, int element_idx)
         {
           std::cout << "LytroElement can be decoded as JPEG" << std::endl;
           filepath = pathstem (element->parent_filepath ())
-                         .concat ("image_" + std::to_string (element_idx)
+                         .concat ("_image_" + std::to_string (element_idx)
                                   + ".jpeg");
         }
       else if (contains_png (element->data (), begin))
         {
           std::cout << "LytroElement can be decoded as PNG" << std::endl;
-          filepath
-              = pathstem (element->parent_filepath ())
-                    .concat ("image_" + std::to_string (element_idx) + ".png");
+          filepath = pathstem (element->parent_filepath ())
+                         .concat ("_image_" + std::to_string (element_idx)
+                                  + ".png");
         }
       else
         {
