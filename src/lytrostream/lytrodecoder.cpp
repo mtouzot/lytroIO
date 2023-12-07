@@ -96,6 +96,9 @@ LytroDecoder::decode (LytroElement *element, int element_idx)
       else
         {
           std::cout << "TODO" << std::endl;
+          filepath = pathstem (element->parent_filepath ())
+                         .concat ("_binary_" + std::to_string (element_idx)
+                                  + ".bin");
         }
 
       element->set_filepath (filepath);
