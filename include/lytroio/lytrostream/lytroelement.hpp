@@ -21,6 +21,7 @@
 
 #include <cstring>
 #include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <string>
 
@@ -161,6 +162,11 @@ public:
    * @return false Current LytroElement contains data
    */
   bool empty ();
+
+  /**
+   * @brief Save current LytroElement data to LytroElement filepath
+   */
+  void save ();
 
   /**
    * @brief Override operator << to format LytroElement display

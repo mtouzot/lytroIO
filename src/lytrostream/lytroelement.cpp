@@ -124,6 +124,16 @@ LytroElement::empty ()
   return (this->length_ == 0);
 }
 
+void
+LytroElement::save ()
+{
+  std::ofstream file;
+  file.open (this->filepath_, std::ios::binary);
+  file << this->data_;
+  file.close ();
+  std::cout << "Element saved at " << this->filepath_ << std::endl;
+}
+
 std::ostream &
 operator<< (std::ostream &os, const LytroElement &element)
 {
