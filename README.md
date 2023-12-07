@@ -3,7 +3,7 @@
 > [!IMPORTANT]
 > This repo is still under development.
 
-> lytroIO aims to be a small C++ library to process Lytro files (extracting metadatas, saving images,... )
+lytroIO aims to be a small C++ library to process Lytro files (extracting metadatas, saving images,... )
 
 
 - **Source code** 📁: [github.com/mtouzot/lytroIO](https://github.com/mtouzot/lytroIO)
