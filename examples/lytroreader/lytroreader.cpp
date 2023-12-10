@@ -26,6 +26,7 @@ main (int argc, char *argv[])
     {
       std::cout << "Lytro filepath correctly read!" << std::endl;
       lfile.decode ();
+      lfile.save ();
     }
   else
     std::cout << "Lytro filepath unreadable..." << std::endl;

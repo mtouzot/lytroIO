@@ -56,4 +56,18 @@ LytroFile::decode ()
       std::cout << std::endl;
     }
 }
+
+void
+LytroFile::save ()
+{
+  for (auto iter_element = this->begin (); iter_element != this->end ();
+       ++iter_element)
+    {
+      std::ofstream output_file;
+      output_file.open (iter_element->filepath (),
+                        std::ios::out | std::ios::binary);
+      output_file << iter_element->data ();
+      output_file.close ();
+    }
+}
 } // namespace lytroio

@@ -102,6 +102,7 @@ public:
 
   bool read ();
   void decode ();
+  void save ();
 
 private:
   std::string filename_;
