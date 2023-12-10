@@ -38,6 +38,9 @@ class LytroFile
 {
 public:
   // Custom LytroFile Iterator
+  /**
+   * @brief ForwardIterator to LytroElement type
+   */
   struct LytroIterator
   {
     using iterator_category = std::forward_iterator_tag;
@@ -86,22 +89,59 @@ public:
     pointer m_ptr;
   };
 
+  /**
+   * @brief returns an iterator to the beginning
+   *
+   * @return LytroIterator to the first element
+   */
   LytroIterator
   begin ()
   {
     return LytroIterator (&elements_->front ());
   }
+
+  /**
+   * @brief returns an iterator to the end
+   *
+   * @return LytroIterator to the element following the last element
+   */
   LytroIterator
   end ()
   {
     return ++(LytroIterator (&elements_->back ()));
   }
 
+  /**
+   * @brief Construct a new Lytro File object
+   *
+   * @param filename filename of the lytro file to process
+   */
   LytroFile (std::string filename);
+
+  /**
+   * @brief Destroy the Lytro File object
+   *
+   */
   ~LytroFile ();
 
+  /**
+   * @brief Read the file content
+   *
+   * @return true if the file is correctly read
+   * @return false if there is an error during the reading
+   */
   bool read ();
+
+  /**
+   * @brief Call a LytroDecoder to decode the data of each LytroElement
+   * contained in the LytroFile
+   */
   void decode ();
+
+  /**
+   * @brief Save the data of each LytroElement contained in the LytroFile in
+   * its correct output file
+   */
   void save ();
 
 private:
