@@ -14,6 +14,8 @@ message(STATUS "Building LytroIO v${CMAKE_PROJECT_VERSION}")
 
 include(GNUInstallDirs)
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/include/lytroio/config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/include/lytroio/config.h)
+
 # Source and header dir
 set(PROJECT_INCLUDE_DIR "include/lytroio")
 set(PROJECT_SOURCE_DIR "src")
@@ -55,6 +57,7 @@ endif()
 
 # Define your library sources
 set(PUBLIC_HEADERS
+    include/lytroio/config.h
     include/lytroio/lytrostream/lytrodecoder.hpp
     include/lytroio/lytrostream/lytroelement.hpp
     include/lytroio/lytrostream/lytrofile.hpp

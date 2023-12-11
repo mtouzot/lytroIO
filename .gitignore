@@ -1,3 +1,6 @@
+# Project dev files
+include/lytroio/config.h
+
 # Prerequisites
 *.d
 
