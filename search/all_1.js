@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['empty_2',['empty',['../classlytroio_1_1LytroElement.html#ab6c00100deab4a5f921f1d0b87c881fa',1,'lytroio::LytroElement']]]
+  ['data_1',['data',['../classlytroio_1_1LytroElement.html#af0e648f7c5d782a9aec3e2fb3eeccfc1',1,'lytroio::LytroElement']]],
+  ['decode_2',['decode',['../classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29',1,'lytroio::LytroDecoder::decode()'],['../classlytroio_1_1LytroFile.html#a8f04ceef5ec20660bfca7516be1fcd94',1,'lytroio::LytroFile::decode()']]]
 ];

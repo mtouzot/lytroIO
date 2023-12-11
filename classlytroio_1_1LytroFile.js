@@ -6,5 +6,6 @@ var classlytroio_1_1LytroFile =
     [ "begin", "classlytroio_1_1LytroFile.html#aa92a8a3f5496f37c516bfb7f8c5b1fb0", null ],
     [ "decode", "classlytroio_1_1LytroFile.html#a8f04ceef5ec20660bfca7516be1fcd94", null ],
     [ "end", "classlytroio_1_1LytroFile.html#a1b58fd2d6e375e3b4326d89fca9e8f8a", null ],
-    [ "read", "classlytroio_1_1LytroFile.html#a93c96fd2216e48d06c457c7ca2de0b7e", null ]
+    [ "read", "classlytroio_1_1LytroFile.html#a93c96fd2216e48d06c457c7ca2de0b7e", null ],
+    [ "save", "classlytroio_1_1LytroFile.html#a28a703147ce163c16954e9de3c690498", null ]
 ];

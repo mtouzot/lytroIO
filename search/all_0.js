@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['data_0',['data',['../classlytroio_1_1LytroElement.html#af0e648f7c5d782a9aec3e2fb3eeccfc1',1,'lytroio::LytroElement']]],
-  ['decode_1',['decode',['../classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29',1,'lytroio::LytroDecoder']]]
+  ['begin_0',['begin',['../classlytroio_1_1LytroFile.html#aa92a8a3f5496f37c516bfb7f8c5b1fb0',1,'lytroio::LytroFile']]]
 ];
