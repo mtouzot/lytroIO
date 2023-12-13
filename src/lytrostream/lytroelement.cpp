@@ -60,12 +60,6 @@ LytroElement::filepath () const
   return this->filepath_;
 }
 
-const std::filesystem::path
-LytroElement::parent_filepath () const
-{
-  return this->parent_filepath_;
-}
-
 void
 LytroElement::set_type (enum LytroElement::LytroElementType type)
 {
@@ -107,17 +101,6 @@ LytroElement::set_filepath (std::filesystem::path filepath)
     }
 }
 
-void
-LytroElement::set_parent_filepath (std::filesystem::path parent_filepath)
-{
-  if (this->parent_filepath_.empty ())
-    this->parent_filepath_ = parent_filepath;
-  else
-    {
-      this->parent_filepath_.replace_filename (parent_filepath);
-    }
-}
-
 bool
 LytroElement::empty ()
 {
@@ -144,8 +127,6 @@ operator<< (std::ostream &os, const LytroElement &element)
     os << "sha-1 : " << element.sha () << std::endl;
   if (!element.filepath ().empty ())
     os << "filename :" << element.filepath () << std::endl;
-  if (!element.parent_filepath ().empty ())
-    os << "parent file : " << element.parent_filepath () << std::endl;
 
   return os;
 }

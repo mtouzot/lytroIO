@@ -30,7 +30,7 @@ LytroDecoder::read_next_element (std::string data_buffer, size_t &pos,
                                  std::filesystem::path data_filepath)
 {
   LytroElement element = LytroElement ();
-  element.set_parent_filepath (data_filepath);
+  element.set_filepath (data_filepath);
 
   std::string header_type = data_buffer.substr (pos, LYTRO_HEADER);
   pos += LYTRO_HEADER;
@@ -75,28 +75,28 @@ LytroDecoder::decode (LytroElement *element, int element_idx)
       if (contains_json (element->data ()))
         {
           std::cout << "LytroElement can be decoded as JSON" << std::endl;
-          filepath = pathstem (element->parent_filepath ())
+          filepath = pathstem (element->filepath ())
                          .concat ("_metadata_" + std::to_string (element_idx)
                                   + ".json");
         }
       else if (contains_jpeg (element->data (), begin, end))
         {
           std::cout << "LytroElement can be decoded as JPEG" << std::endl;
-          filepath = pathstem (element->parent_filepath ())
+          filepath = pathstem (element->filepath ())
                          .concat ("_image_" + std::to_string (element_idx)
                                   + ".jpeg");
         }
       else if (contains_png (element->data (), begin))
         {
           std::cout << "LytroElement can be decoded as PNG" << std::endl;
-          filepath = pathstem (element->parent_filepath ())
+          filepath = pathstem (element->filepath ())
                          .concat ("_image_" + std::to_string (element_idx)
                                   + ".png");
         }
       else
         {
           std::cout << "TODO" << std::endl;
-          filepath = pathstem (element->parent_filepath ())
+          filepath = pathstem (element->filepath ())
                          .concat ("_binary_" + std::to_string (element_idx)
                                   + ".bin");
         }
