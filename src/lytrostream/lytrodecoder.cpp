@@ -11,8 +11,7 @@ namespace lytroio
 using json = nlohmann::json;
 
 std::vector<LytroElement> *
-LytroDecoder::read (std::string data_buffer,
-                    std::filesystem::path data_filepath)
+LytroDecoder::read (std::string data_buffer)
 {
   std::vector<LytroElement> *elements = new std::vector<LytroElement> ();
   size_t position_in_buffer = 0;
@@ -20,17 +19,15 @@ LytroDecoder::read (std::string data_buffer,
   while (position_in_buffer < data_buffer.length ())
     {
       elements->push_back (
-          read_next_element (data_buffer, position_in_buffer, data_filepath));
+          read_next_element (data_buffer, position_in_buffer));
     }
   return elements;
 }
 
 LytroElement
-LytroDecoder::read_next_element (std::string data_buffer, size_t &pos,
-                                 std::filesystem::path data_filepath)
+LytroDecoder::read_next_element (std::string data_buffer, size_t &pos)
 {
   LytroElement element = LytroElement ();
-  element.set_filepath (data_filepath);
 
   std::string header_type = data_buffer.substr (pos, LYTRO_HEADER);
   pos += LYTRO_HEADER;
@@ -100,7 +97,6 @@ LytroDecoder::decode (LytroElement *element, int element_idx)
                          .concat ("_binary_" + std::to_string (element_idx)
                                   + ".bin");
         }
-
       element->set_filepath (filepath);
     }
   else

@@ -145,7 +145,7 @@ public:
   void save ();
 
 private:
-  std::string filename_;
+  std::filesystem::path filename_;
   std::vector<LytroElement> *elements_;
   LytroDecoder *ldecoder_;
 };

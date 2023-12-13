@@ -36,7 +36,7 @@ LytroFile::read ()
   file.read (&data_buffer_temp[0], len);
   file.close ();
 
-  this->elements_ = this->ldecoder_->read (data_buffer_temp, this->filename_);
+  this->elements_ = this->ldecoder_->read (data_buffer_temp);
 
   return (this->elements_->front ().type () == "LFP");
 }
@@ -53,6 +53,11 @@ LytroFile::decode ()
                 << this->elements_->size () << "] " << iter_element->type ()
                 << std::endl;
       this->ldecoder_->decode (&*iter_element, element_idx);
+      std::filesystem::path element_filepath
+          = this->filename_.parent_path ().append (
+              this->filename_.stem ().string ()
+              + iter_element->filepath ().string ());
+      iter_element->set_filepath (element_filepath);
       std::cout << std::endl;
     }
 }
@@ -63,11 +68,14 @@ LytroFile::save ()
   for (auto iter_element = this->begin (); iter_element != this->end ();
        ++iter_element)
     {
-      std::ofstream output_file;
-      output_file.open (iter_element->filepath (),
-                        std::ios::out | std::ios::binary);
-      output_file << iter_element->data ();
-      output_file.close ();
+      if (!iter_element->empty ())
+        {
+          std::ofstream output_file;
+          output_file.open (iter_element->filepath (),
+                            std::ios::out | std::ios::binary);
+          output_file << iter_element->data ();
+          output_file.close ();
+        }
     }
 }
 } // namespace lytroio
