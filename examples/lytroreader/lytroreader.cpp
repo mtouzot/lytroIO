@@ -2,7 +2,7 @@
 // Distributed under the GPL-3.0 Licence
 // (https://opensource.org/license/gpl-3-0/)
 
-#include <lytroio\lytrostream\lytrofile.hpp>
+#include <lytroio/lytrostream/lytrofile.hpp>
 
 #include <fstream>
 #include <iostream>
