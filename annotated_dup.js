@@ -1,8 +1,8 @@
 var annotated_dup =
 [
-    [ "lytroio", null, [
-      [ "LytroDecoder", "classlytroio_1_1LytroDecoder.html", "classlytroio_1_1LytroDecoder" ],
-      [ "LytroElement", "classlytroio_1_1LytroElement.html", "classlytroio_1_1LytroElement" ],
-      [ "LytroFile", "classlytroio_1_1LytroFile.html", "classlytroio_1_1LytroFile" ]
+    [ "lytroIO", null, [
+      [ "LytroDecoder", "classlytroIO_1_1LytroDecoder.html", "classlytroIO_1_1LytroDecoder" ],
+      [ "LytroElement", "classlytroIO_1_1LytroElement.html", "classlytroIO_1_1LytroElement" ],
+      [ "LytroFile", "classlytroIO_1_1LytroFile.html", "classlytroIO_1_1LytroFile" ]
     ] ]
 ];

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['length_6',['length',['../classlytroio_1_1LytroElement.html#a2d7c129ca8d51f55ed3b04d41d9510ca',1,'lytroio::LytroElement']]],
-  ['lytrodecoder_7',['LytroDecoder',['../classlytroio_1_1LytroDecoder.html',1,'lytroio']]],
-  ['lytroelement_8',['LytroElement',['../classlytroio_1_1LytroElement.html#a77af45328bade630c6841823de080b48',1,'lytroio::LytroElement::LytroElement()=default'],['../classlytroio_1_1LytroElement.html#af203d766d750eda97c5e37df09eac34e',1,'lytroio::LytroElement::LytroElement(enum LytroElement::LytroElementType type)'],['../classlytroio_1_1LytroElement.html',1,'lytroio::LytroElement']]],
-  ['lytrofile_9',['LytroFile',['../classlytroio_1_1LytroFile.html#a91adcdb1377453427da1c7376087eb3c',1,'lytroio::LytroFile::LytroFile()'],['../classlytroio_1_1LytroFile.html',1,'lytroio::LytroFile']]],
+  ['length_6',['length',['../classlytroIO_1_1LytroElement.html#ab437a4c60ddd023de29350b642f7d677',1,'lytroIO::LytroElement']]],
+  ['lytrodecoder_7',['LytroDecoder',['../classlytroIO_1_1LytroDecoder.html',1,'lytroIO']]],
+  ['lytroelement_8',['LytroElement',['../classlytroIO_1_1LytroElement.html#a554996a342090c75810aca0817cc21f9',1,'lytroIO::LytroElement::LytroElement()=default'],['../classlytroIO_1_1LytroElement.html#a14adf1fa74623205f3cab55c2ba39450',1,'lytroIO::LytroElement::LytroElement(enum LytroElement::LytroElementType type)'],['../classlytroIO_1_1LytroElement.html',1,'lytroIO::LytroElement']]],
+  ['lytrofile_9',['LytroFile',['../classlytroIO_1_1LytroFile.html#a6286ecaa7c2499991f10c0bc33b98272',1,'lytroIO::LytroFile::LytroFile()'],['../classlytroIO_1_1LytroFile.html',1,'lytroIO::LytroFile']]],
   ['lytroio_10',['lytroIO',['../index.html',1,'']]],
-  ['lytroiterator_11',['LytroIterator',['../structlytroio_1_1LytroFile_1_1LytroIterator.html',1,'lytroio::LytroFile']]]
+  ['lytroiterator_11',['LytroIterator',['../structlytroIO_1_1LytroFile_1_1LytroIterator.html',1,'lytroIO::LytroFile']]]
 ];

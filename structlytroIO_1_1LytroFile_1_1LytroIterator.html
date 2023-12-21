@@ -15,7 +15,7 @@
     <meta name="twitter:title" content="lytroIO" />
     <meta name="twitter:description" content="A simple to use C++ library to process Lytro files (.lfp, .lfr, .raw, ...)." />
     <!-- END twitter metadata -->
-    <title>lytroIO: lytroio::LytroDecoder Class Reference</title>
+    <title>lytroIO: lytroIO::LytroFile::LytroIterator Struct Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/svg+xml" href="logo.drawio.svg">
     <script type="text/javascript" src="jquery.js"></script>
@@ -90,7 +90,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classlytroio_1_1LytroDecoder.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structlytroIO_1_1LytroFile_1_1LytroIterator.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -110,123 +110,76 @@ $(document).ready(function(){initNavTree('classlytroio_1_1LytroDecoder.html','')
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classlytroio_1_1LytroDecoder-members.html">List of all members</a>  </div>
+<a href="#friends">Friends</a> &#124;
+<a href="structlytroIO_1_1LytroFile_1_1LytroIterator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lytroio::LytroDecoder Class Reference</div>  </div>
+<div class="title">lytroIO::LytroFile::LytroIterator Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>ForwardIterator to <a class="el" href="classlytroIO_1_1LytroElement.html">LytroElement</a> type.  
+ <a href="structlytroIO_1_1LytroFile_1_1LytroIterator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="lytrofile_8hpp_source.html">lytrofile.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a3eee188c1f1611426426187918232f7b"><td class="memItemLeft" align="right" valign="top"><a id="a3eee188c1f1611426426187918232f7b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator_category</b> = std::forward_iterator_tag</td></tr>
+<tr class="separator:a3eee188c1f1611426426187918232f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413f81f7aac1ff2b5dafe1ac2fb35a12"><td class="memItemLeft" align="right" valign="top"><a id="a413f81f7aac1ff2b5dafe1ac2fb35a12"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = std::ptrdiff_t</td></tr>
+<tr class="separator:a413f81f7aac1ff2b5dafe1ac2fb35a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0dba6886b1c4dffa37c877b9041e1c"><td class="memItemLeft" align="right" valign="top"><a id="a8f0dba6886b1c4dffa37c877b9041e1c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = <a class="el" href="classlytroIO_1_1LytroElement.html">LytroElement</a></td></tr>
+<tr class="separator:a8f0dba6886b1c4dffa37c877b9041e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7daaf6b171ab6008f7a89be4402d53ff"><td class="memItemLeft" align="right" valign="top"><a id="a7daaf6b171ab6008f7a89be4402d53ff"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = <a class="el" href="classlytroIO_1_1LytroElement.html">LytroElement</a> *</td></tr>
+<tr class="separator:a7daaf6b171ab6008f7a89be4402d53ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab1a28c565288a372fe615a9a87078c"><td class="memItemLeft" align="right" valign="top"><a id="a4ab1a28c565288a372fe615a9a87078c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = <a class="el" href="classlytroIO_1_1LytroElement.html">LytroElement</a> &amp;</td></tr>
+<tr class="separator:a4ab1a28c565288a372fe615a9a87078c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8fcf6600e0f3e29bb56670b87e87eda1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1">read</a> (std::string data_buffer)</td></tr>
-<tr class="memdesc:a8fcf6600e0f3e29bb56670b87e87eda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all buffer to construct a pointer to a vector of <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>.  <a href="classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1">More...</a><br /></td></tr>
-<tr class="separator:a8fcf6600e0f3e29bb56670b87e87eda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a888661c139b75d5bdd5f47c8cd02610e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e">read_next_element</a> (std::string data_buffer, size_t &amp;pos)</td></tr>
-<tr class="memdesc:a888661c139b75d5bdd5f47c8cd02610e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the buffer from position indexed by pos to construct a <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>.  <a href="classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e">More...</a><br /></td></tr>
-<tr class="separator:a888661c139b75d5bdd5f47c8cd02610e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7aa10d59cf45bcbff747c6abb043b29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29">decode</a> (<a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> *element, int element_idx)</td></tr>
-<tr class="memdesc:ac7aa10d59cf45bcbff747c6abb043b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> data to human readable data.  <a href="classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29">More...</a><br /></td></tr>
-<tr class="separator:ac7aa10d59cf45bcbff747c6abb043b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3fbd468dfd39e6749941768f5aeecf"><td class="memItemLeft" align="right" valign="top"><a id="a9e3fbd468dfd39e6749941768f5aeecf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LytroIterator</b> (<a class="el" href="classlytroIO_1_1LytroElement.html">pointer</a> ptr)</td></tr>
+<tr class="separator:a9e3fbd468dfd39e6749941768f5aeecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90736085a33ec09ecb7e8d8aa91a3a36"><td class="memItemLeft" align="right" valign="top"><a id="a90736085a33ec09ecb7e8d8aa91a3a36"></a>
+<a class="el" href="classlytroIO_1_1LytroElement.html">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
+<tr class="separator:a90736085a33ec09ecb7e8d8aa91a3a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae19737575ac8c48016928db12d76d6"><td class="memItemLeft" align="right" valign="top"><a id="abae19737575ac8c48016928db12d76d6"></a>
+<a class="el" href="classlytroIO_1_1LytroElement.html">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> ()</td></tr>
+<tr class="separator:abae19737575ac8c48016928db12d76d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6834fd2214a6f0a00e156c78ab545cb1"><td class="memItemLeft" align="right" valign="top"><a id="a6834fd2214a6f0a00e156c78ab545cb1"></a>
+<a class="el" href="structlytroIO_1_1LytroFile_1_1LytroIterator.html">LytroIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
+<tr class="separator:a6834fd2214a6f0a00e156c78ab545cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b948b58b14ebf0e423290e6cf4d0fb"><td class="memItemLeft" align="right" valign="top"><a id="a39b948b58b14ebf0e423290e6cf4d0fb"></a>
+<a class="el" href="structlytroIO_1_1LytroFile_1_1LytroIterator.html">LytroIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> (int)</td></tr>
+<tr class="separator:a39b948b58b14ebf0e423290e6cf4d0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:afd3bc8fc144cb575f09cf3afda3c260c"><td class="memItemLeft" align="right" valign="top"><a id="afd3bc8fc144cb575f09cf3afda3c260c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structlytroIO_1_1LytroFile_1_1LytroIterator.html">LytroIterator</a> &amp;a, const <a class="el" href="structlytroIO_1_1LytroFile_1_1LytroIterator.html">LytroIterator</a> &amp;b)</td></tr>
+<tr class="separator:afd3bc8fc144cb575f09cf3afda3c260c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aae6e63c0c4ad97f9448ddd7f1fecd5"><td class="memItemLeft" align="right" valign="top"><a id="a1aae6e63c0c4ad97f9448ddd7f1fecd5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="structlytroIO_1_1LytroFile_1_1LytroIterator.html">LytroIterator</a> &amp;a, const <a class="el" href="structlytroIO_1_1LytroFile_1_1LytroIterator.html">LytroIterator</a> &amp;b)</td></tr>
+<tr class="separator:a1aae6e63c0c4ad97f9448ddd7f1fecd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac7aa10d59cf45bcbff747c6abb043b29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7aa10d59cf45bcbff747c6abb043b29">&#9670;&nbsp;</a></span>decode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lytroio::LytroDecoder::decode </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> *&#160;</td>
-          <td class="paramname"><em>element</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>element_idx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Decode <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> data to human readable data. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">element</td><td>Pointer to <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> to decode </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a8fcf6600e0f3e29bb56670b87e87eda1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fcf6600e0f3e29bb56670b87e87eda1">&#9670;&nbsp;</a></span>read()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>&gt;* lytroio::LytroDecoder::read </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>data_buffer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read all buffer to construct a pointer to a vector of <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to a vector of <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> </dd></dl>
-
-</div>
-</div>
-<a id="a888661c139b75d5bdd5f47c8cd02610e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a888661c139b75d5bdd5f47c8cd02610e">&#9670;&nbsp;</a></span>read_next_element()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> lytroio::LytroDecoder::read_next_element </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>data_buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read the buffer from position indexed by pos to construct a <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classlytroio_1_1LytroElement.html">LytroElement</a> </dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/LytroIO/LytroIO/include/lytroio/lytrostream/<a class="el" href="lytrodecoder_8hpp_source.html">lytrodecoder.hpp</a></li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>ForwardIterator to <a class="el" href="classlytroIO_1_1LytroElement.html">LytroElement</a> type. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/runner/work/lytroIO/lytroIO/include/lytroIO/lytrostream/<a class="el" href="lytrofile_8hpp_source.html">lytrofile.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>lytroio</b></li><li class="navelem"><a class="el" href="classlytroio_1_1LytroDecoder.html">LytroDecoder</a></li>
+    <li class="navelem"><b>lytroIO</b></li><li class="navelem"><a class="el" href="classlytroIO_1_1LytroFile.html">LytroFile</a></li><li class="navelem"><a class="el" href="structlytroIO_1_1LytroFile_1_1LytroIterator.html">LytroIterator</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

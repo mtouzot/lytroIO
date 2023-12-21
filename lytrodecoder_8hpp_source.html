@@ -15,7 +15,7 @@
     <meta name="twitter:title" content="lytroIO" />
     <meta name="twitter:description" content="A simple to use C++ library to process Lytro files (.lfp, .lfr, .raw, ...)." />
     <!-- END twitter metadata -->
-    <title>lytroIO: /home/runner/work/LytroIO/LytroIO/include/lytroio/lytrostream/lytrodecoder.hpp Source File</title>
+    <title>lytroIO: /home/runner/work/lytroIO/lytroIO/include/lytroIO/lytrostream/lytrodecoder.hpp Source File</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/svg+xml" href="logo.drawio.svg">
     <script type="text/javascript" src="jquery.js"></script>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('lytrodecoder_8hpp_source.html',''); in
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;filesystem&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;lytroio/lytrostream/lytroelement.hpp&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;lytroIO/lytrostream/lytroelement.hpp&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -137,19 +137,19 @@ $(document).ready(function(){initNavTree('lytrodecoder_8hpp_source.html',''); in
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define LYTRO_SHA1 45</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define LYTRO_SHA1_PADDING 35</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>lytroio</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>lytroIO</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroDecoder.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlytroio_1_1LytroDecoder.html">LytroDecoder</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classlytroIO_1_1LytroDecoder.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlytroIO_1_1LytroDecoder.html">LytroDecoder</a></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">typedef</span> std::map&lt;std::string_view, LytroElement::LytroElementType&gt;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      LytroHeaderType_t;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1">   49</a></span>&#160;  std::vector&lt;LytroElement&gt; *<a class="code" href="classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1">read</a> (std::string data_buffer);</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classlytroIO_1_1LytroDecoder.html#a38d7f359536333c642e5c97f02f0ebc6">   49</a></span>&#160;  std::vector&lt;LytroElement&gt; *<a class="code" href="classlytroIO_1_1LytroDecoder.html#a38d7f359536333c642e5c97f02f0ebc6">read</a> (std::string data_buffer);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e">   57</a></span>&#160;  <a class="code" href="classlytroio_1_1LytroElement.html">LytroElement</a> <a class="code" href="classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e">read_next_element</a> (std::string data_buffer, <span class="keywordtype">size_t</span> &amp;pos);</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classlytroIO_1_1LytroDecoder.html#ab7b9d7e0e3862d52a0380faede635e13">   57</a></span>&#160;  <a class="code" href="classlytroIO_1_1LytroElement.html">LytroElement</a> <a class="code" href="classlytroIO_1_1LytroDecoder.html#ab7b9d7e0e3862d52a0380faede635e13">read_next_element</a> (std::string data_buffer, <span class="keywordtype">size_t</span> &amp;pos);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29">   64</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29">decode</a> (<a class="code" href="classlytroio_1_1LytroElement.html">LytroElement</a> *element, <span class="keywordtype">int</span> element_idx);</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classlytroIO_1_1LytroDecoder.html#ab5ecd55b51291e2ca1e3ef0f965174f4">   64</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroIO_1_1LytroDecoder.html#ab5ecd55b51291e2ca1e3ef0f965174f4">decode</a> (<a class="code" href="classlytroIO_1_1LytroElement.html">LytroElement</a> *element, <span class="keywordtype">int</span> element_idx);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">bool</span> contains_json (std::string data);</div>
@@ -166,20 +166,20 @@ $(document).ready(function(){initNavTree('lytrodecoder_8hpp_source.html',''); in
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;          { <span class="stringliteral">&quot;\x89\x4c\x46\x4D\x0D\x0A\x1A\x0A&quot;</span>,</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            LytroElement::LytroElementType::LFM } };</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace lytroio</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace lytroIO</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// LYTRODECODER_H</span></div>
-<div class="ttc" id="aclasslytroio_1_1LytroDecoder_html"><div class="ttname"><a href="classlytroio_1_1LytroDecoder.html">lytroio::LytroDecoder</a></div><div class="ttdef"><b>Definition:</b> lytrodecoder.hpp:39</div></div>
-<div class="ttc" id="aclasslytroio_1_1LytroDecoder_html_a888661c139b75d5bdd5f47c8cd02610e"><div class="ttname"><a href="classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e">lytroio::LytroDecoder::read_next_element</a></div><div class="ttdeci">LytroElement read_next_element(std::string data_buffer, size_t &amp;pos)</div><div class="ttdoc">Read the buffer from position indexed by pos to construct a LytroElement.</div></div>
-<div class="ttc" id="aclasslytroio_1_1LytroDecoder_html_a8fcf6600e0f3e29bb56670b87e87eda1"><div class="ttname"><a href="classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1">lytroio::LytroDecoder::read</a></div><div class="ttdeci">std::vector&lt; LytroElement &gt; * read(std::string data_buffer)</div><div class="ttdoc">Read all buffer to construct a pointer to a vector of LytroElement.</div></div>
-<div class="ttc" id="aclasslytroio_1_1LytroDecoder_html_ac7aa10d59cf45bcbff747c6abb043b29"><div class="ttname"><a href="classlytroio_1_1LytroDecoder.html#ac7aa10d59cf45bcbff747c6abb043b29">lytroio::LytroDecoder::decode</a></div><div class="ttdeci">void decode(LytroElement *element, int element_idx)</div><div class="ttdoc">Decode LytroElement data to human readable data.</div></div>
-<div class="ttc" id="aclasslytroio_1_1LytroElement_html"><div class="ttname"><a href="classlytroio_1_1LytroElement.html">lytroio::LytroElement</a></div><div class="ttdef"><b>Definition:</b> lytroelement.hpp:31</div></div>
+<div class="ttc" id="aclasslytroIO_1_1LytroDecoder_html"><div class="ttname"><a href="classlytroIO_1_1LytroDecoder.html">lytroIO::LytroDecoder</a></div><div class="ttdef"><b>Definition:</b> lytrodecoder.hpp:39</div></div>
+<div class="ttc" id="aclasslytroIO_1_1LytroDecoder_html_a38d7f359536333c642e5c97f02f0ebc6"><div class="ttname"><a href="classlytroIO_1_1LytroDecoder.html#a38d7f359536333c642e5c97f02f0ebc6">lytroIO::LytroDecoder::read</a></div><div class="ttdeci">std::vector&lt; LytroElement &gt; * read(std::string data_buffer)</div><div class="ttdoc">Read all buffer to construct a pointer to a vector of LytroElement.</div></div>
+<div class="ttc" id="aclasslytroIO_1_1LytroDecoder_html_ab5ecd55b51291e2ca1e3ef0f965174f4"><div class="ttname"><a href="classlytroIO_1_1LytroDecoder.html#ab5ecd55b51291e2ca1e3ef0f965174f4">lytroIO::LytroDecoder::decode</a></div><div class="ttdeci">void decode(LytroElement *element, int element_idx)</div><div class="ttdoc">Decode LytroElement data to human readable data.</div></div>
+<div class="ttc" id="aclasslytroIO_1_1LytroDecoder_html_ab7b9d7e0e3862d52a0380faede635e13"><div class="ttname"><a href="classlytroIO_1_1LytroDecoder.html#ab7b9d7e0e3862d52a0380faede635e13">lytroIO::LytroDecoder::read_next_element</a></div><div class="ttdeci">LytroElement read_next_element(std::string data_buffer, size_t &amp;pos)</div><div class="ttdoc">Read the buffer from position indexed by pos to construct a LytroElement.</div></div>
+<div class="ttc" id="aclasslytroIO_1_1LytroElement_html"><div class="ttname"><a href="classlytroIO_1_1LytroElement.html">lytroIO::LytroElement</a></div><div class="ttdef"><b>Definition:</b> lytroelement.hpp:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_61c1766ff1d01a6ad57c975617a30813.html">lytroio</a></li><li class="navelem"><a class="el" href="dir_72f9fdb8fdbe8adca601e688b6a4927e.html">lytrostream</a></li><li class="navelem"><b>lytrodecoder.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7b4dfd90f9bf360ce9156590a34bb53c.html">lytroIO</a></li><li class="navelem"><a class="el" href="dir_c1c1ab7dd563b307811a8a474b9fc271.html">lytrostream</a></li><li class="navelem"><b>lytrodecoder.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
