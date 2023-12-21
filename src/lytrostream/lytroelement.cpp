@@ -2,9 +2,9 @@
 // Distributed under the GPL-3.0 Licence
 // (https://opensource.org/license/gpl-3-0/)
 
-#include <lytroio/lytrostream/lytroelement.hpp>
+#include <lytroIO/lytrostream/lytroelement.hpp>
 
-namespace lytroio
+namespace lytroIO
 {
 LytroElement::LytroElement (enum LytroElement::LytroElementType type)
     : type_ (type)
@@ -130,4 +130,4 @@ operator<< (std::ostream &os, const LytroElement &element)
 
   return os;
 }
-} // namespace lytroio
+} // namespace lytroIO

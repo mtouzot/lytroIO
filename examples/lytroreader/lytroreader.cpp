@@ -2,7 +2,7 @@
 // Distributed under the GPL-3.0 Licence
 // (https://opensource.org/license/gpl-3-0/)
 
-#include <lytroio/lytrostream/lytrofile.hpp>
+#include <lytroIO/lytrostream/lytrofile.hpp>
 
 #include <fstream>
 #include <iostream>
@@ -20,7 +20,7 @@ main (int argc, char *argv[])
 
   std::cout << "Decoding datas from " << argv[1] << std::endl;
 
-  lytroio::LytroFile lfile = lytroio::LytroFile (argv[1]);
+  lytroIO::LytroFile lfile = lytroIO::LytroFile (argv[1]);
 
   if (lfile.read () == true)
     {

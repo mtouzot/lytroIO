@@ -22,7 +22,7 @@
 
 #include <filesystem>
 #include <fstream>
-#include <lytroio/lytrostream/lytroelement.hpp>
+#include <lytroIO/lytrostream/lytroelement.hpp>
 #include <map>
 #include <vector>
 
@@ -33,7 +33,7 @@
 #define LYTRO_SHA1 45
 #define LYTRO_SHA1_PADDING 35
 
-namespace lytroio
+namespace lytroIO
 {
 class LytroDecoder
 {
@@ -99,6 +99,6 @@ private:
           { "\x89\x4c\x46\x4D\x0D\x0A\x1A\x0A",
             LytroElement::LytroElementType::LFM } };
 };
-} // namespace lytroio
+} // namespace lytroIO
 
 #endif // LYTRODECODER_H

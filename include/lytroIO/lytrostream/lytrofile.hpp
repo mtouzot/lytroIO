@@ -21,8 +21,8 @@
 
 #include <fstream>
 #include <iterator>
-#include <lytroio/lytrostream/lytrodecoder.hpp>
-#include <lytroio/lytrostream/lytroelement.hpp>
+#include <lytroIO/lytrostream/lytrodecoder.hpp>
+#include <lytroIO/lytrostream/lytroelement.hpp>
 #include <vector>
 
 #define LYTRO_STEP 16
@@ -32,7 +32,7 @@
 #define LYTRO_SHA1 45
 #define LYTRO_SHA1_PADDING 35
 
-namespace lytroio
+namespace lytroIO
 {
 class LytroFile
 {
@@ -149,6 +149,6 @@ private:
   std::vector<LytroElement> *elements_;
   LytroDecoder *ldecoder_;
 };
-} // namespace lytroio
+} // namespace lytroIO
 
 #endif // LYTROFILE_H

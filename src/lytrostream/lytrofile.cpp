@@ -3,9 +3,9 @@
 // (https://opensource.org/license/gpl-3-0/)
 
 #include "utils.hpp"
-#include <lytroio/lytrostream/lytrofile.hpp>
+#include <lytroIO/lytrostream/lytrofile.hpp>
 
-namespace lytroio
+namespace lytroIO
 {
 LytroFile::LytroFile (std::string filename) : filename_ (filename)
 {
@@ -78,4 +78,4 @@ LytroFile::save ()
         }
     }
 }
-} // namespace lytroio
+} // namespace lytroIO

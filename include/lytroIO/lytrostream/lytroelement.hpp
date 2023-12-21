@@ -25,7 +25,7 @@
 #include <iostream>
 #include <string>
 
-namespace lytroio
+namespace lytroIO
 {
 class LytroElement
 {
@@ -172,6 +172,6 @@ private:
   std::filesystem::path filepath_ = "";
 };
 
-} // namespace lytroio
+} // namespace lytroIO
 
 #endif // LYTROELEMENT_H

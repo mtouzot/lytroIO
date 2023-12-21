@@ -29,8 +29,8 @@ Image taken with a Lytro camera animated by [Christopher Hahne](http://www.chris
 
 Here are the commands to compile this project :
 ```console
-cd <lytroio_build_directory>
-cmake -G <cmake_generator> -DBUILD_EXAMPLES=<ON/OFF> -DBUILD_DOCS=<ON/OFF> <lytroio_source_directory>
+cd <lytroIO_build_directory>
+cmake -G <cmake_generator> -DBUILD_EXAMPLES=<ON/OFF> -DBUILD_DOCS=<ON/OFF> <lytroIO_source_directory>
 cmake --build . --config <cfg>
 ```
 By default, **BUILD_EXAMPLES** and **BUILD_DOCS** are set to **OFF**.

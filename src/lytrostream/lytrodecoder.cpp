@@ -3,10 +3,10 @@
 // (https://opensource.org/license/gpl-3-0/)
 
 #include "utils.hpp"
-#include <lytroio/lytrostream/lytrodecoder.hpp>
+#include <lytroIO/lytrostream/lytrodecoder.hpp>
 #include <nlohmann/json.hpp>
 
-namespace lytroio
+namespace lytroIO
 {
 using json = nlohmann::json;
 
@@ -137,4 +137,4 @@ LytroDecoder::contains_png (std::string data, size_t &begin)
 
   return (begin != std::string::npos);
 }
-} // namespace lytroio
+} // namespace lytroIO
