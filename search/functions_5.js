@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['parent_5ffilepath_42',['parent_filepath',['../classlytroio_1_1LytroElement.html#a55c32c083ea760f8d2e60146d9a6b712',1,'lytroio::LytroElement']]]
+  ['read_40',['read',['../classlytroio_1_1LytroDecoder.html#a8fcf6600e0f3e29bb56670b87e87eda1',1,'lytroio::LytroDecoder::read()'],['../classlytroio_1_1LytroFile.html#a93c96fd2216e48d06c457c7ca2de0b7e',1,'lytroio::LytroFile::read()']]],
+  ['read_5fnext_5felement_41',['read_next_element',['../classlytroio_1_1LytroDecoder.html#a888661c139b75d5bdd5f47c8cd02610e',1,'lytroio::LytroDecoder']]]
 ];

@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "lytroio", "index.html", [
+  [ "lytroIO", "index.html", [
     [ "Description", "index.html#autotoc_md1", null ],
     [ "Compilation", "index.html#autotoc_md2", null ],
     [ "External ressources", "index.html#autotoc_md3", null ],

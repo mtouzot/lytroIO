@@ -7,15 +7,15 @@
     <meta name="generator" content="Doxygen 1.9.1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- BEGIN opengraph metadata -->
-    <meta property="og:title" content="LytroIO" />
+    <meta property="og:title" content="lytroIO" />
     <meta property="og:description" content="A simple to use C++ library to process Lytro files (.lfp, .lfr, .raw, ...)." />
     <meta property="og:url" content="https://mtouzot.github.io/lytroIO/" />
     <!-- END opengraph metadata -->
     <!-- BEGIN twitter metadata -->
-    <meta name="twitter:title" content="LytroIO" />
+    <meta name="twitter:title" content="lytroIO" />
     <meta name="twitter:description" content="A simple to use C++ library to process Lytro files (.lfp, .lfr, .raw, ...)." />
     <!-- END twitter metadata -->
-    <title>lytroio: /home/runner/work/LytroIO/LytroIO/include/lytroio/lytrostream/lytrofile.hpp Source File</title>
+    <title>lytroIO: /home/runner/work/LytroIO/LytroIO/include/lytroio/lytrostream/lytrofile.hpp Source File</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/svg+xml" href="logo.drawio.svg">
     <script type="text/javascript" src="jquery.js"></script>
@@ -53,7 +53,7 @@
             <tbody>
             <tr style="height: 56px;">
                 <td id="projectalign" style="padding-left: 0.5em;">
-                    <div id="projectname">lytroio
+                    <div id="projectname">lytroIO
                     </div>
                     <div id="projectbrief">A C++ library to process Lytro files</div>
                 </td>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('lytrofile_8hpp_source.html',''); initR
 <div class="title">lytrofile.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2023-present, Martin TOUZOT &amp; LytroIO contributors.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2023-present, Martin TOUZOT &amp; lytroIO contributors.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Distributed under the GPL-3.0 Licence</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (https://opensource.org/license/gpl-3-0/)</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span><span class="preprocessor">#pragma once</span></div>
@@ -214,7 +214,7 @@ $(document).ready(function(){initNavTree('lytrofile_8hpp_source.html',''); initR
 <div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroFile.html#a28a703147ce163c16954e9de3c690498">  145</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroFile.html#a28a703147ce163c16954e9de3c690498">save</a> ();</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  std::string filename_;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  std::filesystem::path filename_;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  std::vector&lt;LytroElement&gt; *elements_;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="classlytroio_1_1LytroDecoder.html">LytroDecoder</a> *ldecoder_;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;};</div>

@@ -7,15 +7,15 @@
     <meta name="generator" content="Doxygen 1.9.1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- BEGIN opengraph metadata -->
-    <meta property="og:title" content="LytroIO" />
+    <meta property="og:title" content="lytroIO" />
     <meta property="og:description" content="A simple to use C++ library to process Lytro files (.lfp, .lfr, .raw, ...)." />
     <meta property="og:url" content="https://mtouzot.github.io/lytroIO/" />
     <!-- END opengraph metadata -->
     <!-- BEGIN twitter metadata -->
-    <meta name="twitter:title" content="LytroIO" />
+    <meta name="twitter:title" content="lytroIO" />
     <meta name="twitter:description" content="A simple to use C++ library to process Lytro files (.lfp, .lfr, .raw, ...)." />
     <!-- END twitter metadata -->
-    <title>lytroio: /home/runner/work/LytroIO/LytroIO/include/lytroio/lytrostream/lytroelement.hpp Source File</title>
+    <title>lytroIO: /home/runner/work/LytroIO/LytroIO/include/lytroio/lytrostream/lytroelement.hpp Source File</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/svg+xml" href="logo.drawio.svg">
     <script type="text/javascript" src="jquery.js"></script>
@@ -53,7 +53,7 @@
             <tbody>
             <tr style="height: 56px;">
                 <td id="projectalign" style="padding-left: 0.5em;">
-                    <div id="projectname">lytroio
+                    <div id="projectname">lytroIO
                     </div>
                     <div id="projectbrief">A C++ library to process Lytro files</div>
                 </td>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('lytroelement_8hpp_source.html',''); in
 <div class="title">lytroelement.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2023-present, Martin TOUZOT &amp; LytroIO contributors.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2023-present, Martin TOUZOT &amp; lytroIO contributors.</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Distributed under the GPL-3.0 Licence</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// (https://opensource.org/license/gpl-3-0/)</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span><span class="preprocessor">#pragma once</span></div>
@@ -161,50 +161,43 @@ $(document).ready(function(){initNavTree('lytroelement_8hpp_source.html',''); in
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a364f8869c4f95f92b8f80ebe9a2e708d">  100</a></span>&#160;  <span class="keyword">const</span> std::filesystem::path <a class="code" href="classlytroio_1_1LytroElement.html#a364f8869c4f95f92b8f80ebe9a2e708d">filepath</a> () <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a55c32c083ea760f8d2e60146d9a6b712">  107</a></span>&#160;  <span class="keyword">const</span> std::filesystem::path <a class="code" href="classlytroio_1_1LytroElement.html#a55c32c083ea760f8d2e60146d9a6b712">parent_filepath</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ab6fc977f0f7da1a075f590b8e60cf892">  107</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#ab6fc977f0f7da1a075f590b8e60cf892">set_type</a> (<span class="keyword">enum</span> LytroElement::LytroElementType <a class="code" href="classlytroio_1_1LytroElement.html#a3211944822e0571fcbf3d6264bcaca52">type</a>);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ab6fc977f0f7da1a075f590b8e60cf892">  114</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#ab6fc977f0f7da1a075f590b8e60cf892">set_type</a> (<span class="keyword">enum</span> LytroElement::LytroElementType <a class="code" href="classlytroio_1_1LytroElement.html#a3211944822e0571fcbf3d6264bcaca52">type</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a47978398467ef690dda6898c7261c981">  114</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a47978398467ef690dda6898c7261c981">set_version</a> (<span class="keywordtype">int</span> &amp;<a class="code" href="classlytroio_1_1LytroElement.html#a01455e9a0d4c391cf6acb77b2e51cf4f">version</a>);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a47978398467ef690dda6898c7261c981">  121</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a47978398467ef690dda6898c7261c981">set_version</a> (<span class="keywordtype">int</span> &amp;<a class="code" href="classlytroio_1_1LytroElement.html#a01455e9a0d4c391cf6acb77b2e51cf4f">version</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ad24aef0076d9c34dcdd1e365d039fcd2">  121</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#ad24aef0076d9c34dcdd1e365d039fcd2">set_length</a> (<span class="keywordtype">int</span> &amp;<a class="code" href="classlytroio_1_1LytroElement.html#a2d7c129ca8d51f55ed3b04d41d9510ca">length</a>);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ad24aef0076d9c34dcdd1e365d039fcd2">  128</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#ad24aef0076d9c34dcdd1e365d039fcd2">set_length</a> (<span class="keywordtype">int</span> &amp;<a class="code" href="classlytroio_1_1LytroElement.html#a2d7c129ca8d51f55ed3b04d41d9510ca">length</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a9f797acadf0170866369907380ad07aa">  128</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a9f797acadf0170866369907380ad07aa">set_sha</a> (std::string <a class="code" href="classlytroio_1_1LytroElement.html#a8ddb046b5f0c500ecf8d6c3b58cd2448">sha</a>);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a9f797acadf0170866369907380ad07aa">  135</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a9f797acadf0170866369907380ad07aa">set_sha</a> (std::string <a class="code" href="classlytroio_1_1LytroElement.html#a8ddb046b5f0c500ecf8d6c3b58cd2448">sha</a>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a91c15df0ab544ee798278cf0c768d4fa">  135</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a91c15df0ab544ee798278cf0c768d4fa">set_data</a> (std::string <a class="code" href="classlytroio_1_1LytroElement.html#af0e648f7c5d782a9aec3e2fb3eeccfc1">data</a>);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a91c15df0ab544ee798278cf0c768d4fa">  142</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a91c15df0ab544ee798278cf0c768d4fa">set_data</a> (std::string <a class="code" href="classlytroio_1_1LytroElement.html#af0e648f7c5d782a9aec3e2fb3eeccfc1">data</a>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a8dcab5f94f28a41f48de4d591ad48b10">  142</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a8dcab5f94f28a41f48de4d591ad48b10">set_filepath</a> (std::filesystem::path <a class="code" href="classlytroio_1_1LytroElement.html#a364f8869c4f95f92b8f80ebe9a2e708d">filepath</a>);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a8dcab5f94f28a41f48de4d591ad48b10">  149</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a8dcab5f94f28a41f48de4d591ad48b10">set_filepath</a> (std::filesystem::path <a class="code" href="classlytroio_1_1LytroElement.html#a364f8869c4f95f92b8f80ebe9a2e708d">filepath</a>);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a1da8a3916a32f3fb6e1d0b6fe726ca2c">  156</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#a1da8a3916a32f3fb6e1d0b6fe726ca2c">set_parent_filepath</a> (std::filesystem::path <a class="code" href="classlytroio_1_1LytroElement.html#a55c32c083ea760f8d2e60146d9a6b712">parent_filepath</a>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ab6c00100deab4a5f921f1d0b87c881fa">  164</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlytroio_1_1LytroElement.html#ab6c00100deab4a5f921f1d0b87c881fa">empty</a> ();</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ab6c00100deab4a5f921f1d0b87c881fa">  150</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlytroio_1_1LytroElement.html#ab6c00100deab4a5f921f1d0b87c881fa">empty</a> ();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ae9b41e3845b83825f4f6c0ab71a03cf2">  155</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#ae9b41e3845b83825f4f6c0ab71a03cf2">save</a> ();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a9e612df293f989d54132057791b257cb">  163</a></span>&#160;  <span class="keyword">friend</span> std::ostream &amp;<a class="code" href="classlytroio_1_1LytroElement.html#a9e612df293f989d54132057791b257cb">operator&lt;&lt; </a>(std::ostream &amp;os,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classlytroio_1_1LytroElement.html">LytroElement</a> &amp;element);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#ae9b41e3845b83825f4f6c0ab71a03cf2">  169</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlytroio_1_1LytroElement.html#ae9b41e3845b83825f4f6c0ab71a03cf2">save</a> ();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classlytroio_1_1LytroElement.html#a9e612df293f989d54132057791b257cb">  177</a></span>&#160;  <span class="keyword">friend</span> std::ostream &amp;<a class="code" href="classlytroio_1_1LytroElement.html#a9e612df293f989d54132057791b257cb">operator&lt;&lt; </a>(std::ostream &amp;os,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="classlytroio_1_1LytroElement.html">LytroElement</a> &amp;element);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  LytroElementType type_ = NUL;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">int</span> version_ = -1;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">int</span> length_ = -1;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  std::string sha_ = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  std::string data_ = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  std::filesystem::path filepath_ = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  std::filesystem::path parent_filepath_ = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;} <span class="comment">// namespace lytroio</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// LYTROELEMENT_H</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  LytroElementType type_ = NUL;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">int</span> version_ = -1;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">int</span> length_ = -1;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  std::string sha_ = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  std::string data_ = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  std::filesystem::path filepath_ = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;};</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;} <span class="comment">// namespace lytroio</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// LYTROELEMENT_H</span></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html"><div class="ttname"><a href="classlytroio_1_1LytroElement.html">lytroio::LytroElement</a></div><div class="ttdef"><b>Definition:</b> lytroelement.hpp:31</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a01455e9a0d4c391cf6acb77b2e51cf4f"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a01455e9a0d4c391cf6acb77b2e51cf4f">lytroio::LytroElement::version</a></div><div class="ttdeci">const int version() const</div><div class="ttdoc">Getter of the current LytroElement object version.</div></div>
-<div class="ttc" id="aclasslytroio_1_1LytroElement_html_a1da8a3916a32f3fb6e1d0b6fe726ca2c"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a1da8a3916a32f3fb6e1d0b6fe726ca2c">lytroio::LytroElement::set_parent_filepath</a></div><div class="ttdeci">void set_parent_filepath(std::filesystem::path parent_filepath)</div><div class="ttdoc">Set the parent filepath of the current LytroElement object.</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a2d7c129ca8d51f55ed3b04d41d9510ca"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a2d7c129ca8d51f55ed3b04d41d9510ca">lytroio::LytroElement::length</a></div><div class="ttdeci">const int length() const</div><div class="ttdoc">Getter of the current LytroElement object length.</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a3211944822e0571fcbf3d6264bcaca52"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a3211944822e0571fcbf3d6264bcaca52">lytroio::LytroElement::type</a></div><div class="ttdeci">const char * type() const</div><div class="ttdoc">Getter of the current LytroElement object type.</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a364f8869c4f95f92b8f80ebe9a2e708d"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a364f8869c4f95f92b8f80ebe9a2e708d">lytroio::LytroElement::filepath</a></div><div class="ttdeci">const std::filesystem::path filepath() const</div><div class="ttdoc">Getter of the current LytroElement object filepath.</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a47978398467ef690dda6898c7261c981"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a47978398467ef690dda6898c7261c981">lytroio::LytroElement::set_version</a></div><div class="ttdeci">void set_version(int &amp;version)</div><div class="ttdoc">Set the version of the current LytroElement object.</div></div>
-<div class="ttc" id="aclasslytroio_1_1LytroElement_html_a55c32c083ea760f8d2e60146d9a6b712"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a55c32c083ea760f8d2e60146d9a6b712">lytroio::LytroElement::parent_filepath</a></div><div class="ttdeci">const std::filesystem::path parent_filepath() const</div><div class="ttdoc">Getter of the current LytroElement object parent filepath.</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a77af45328bade630c6841823de080b48"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a77af45328bade630c6841823de080b48">lytroio::LytroElement::LytroElement</a></div><div class="ttdeci">LytroElement()=default</div><div class="ttdoc">Construct a new LytroElement object.</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a8dcab5f94f28a41f48de4d591ad48b10"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a8dcab5f94f28a41f48de4d591ad48b10">lytroio::LytroElement::set_filepath</a></div><div class="ttdeci">void set_filepath(std::filesystem::path filepath)</div><div class="ttdoc">Set the filepath of the current LytroElement object.</div></div>
 <div class="ttc" id="aclasslytroio_1_1LytroElement_html_a8ddb046b5f0c500ecf8d6c3b58cd2448"><div class="ttname"><a href="classlytroio_1_1LytroElement.html#a8ddb046b5f0c500ecf8d6c3b58cd2448">lytroio::LytroElement::sha</a></div><div class="ttdeci">const std::string sha() const</div><div class="ttdoc">Getter of the current LytroElement object sha.</div></div>
