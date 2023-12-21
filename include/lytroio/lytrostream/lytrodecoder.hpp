@@ -1,4 +1,4 @@
-// Copyright (c) 2023-present, Martin TOUZOT & LytroIO contributors.
+// Copyright (c) 2023-present, Martin TOUZOT & lytroIO contributors.
 // Distributed under the GPL-3.0 Licence
 // (https://opensource.org/license/gpl-3-0/)
 /** \file include/lytrioio/lytrostream/lytrodecoder.hpp

@@ -1,16 +1,16 @@
-# Copyright (c) 2023 LytroIO authors distributed under the GPL-3.0 license (https://opensource.org/license/gpl-3-0/)
+# Copyright (c) 2023 lytroIO authors distributed under the GPL-3.0 license (https://opensource.org/license/gpl-3-0/)
 
 cmake_minimum_required(VERSION 3.10...3.21)
 
 #------------------------------------------------------------
-# Start LytroIO project
+# Start lytroIO project
 #------------------------------------------------------------
-project(lytroio
+project(lytroIO
         VERSION "0.0.0"
         DESCRIPTION "A C++ library to process Lytro files"
         HOMEPAGE_URL "https://github.com/mtouzot/lytroIO"
         LANGUAGES CXX)
-message(STATUS "Building LytroIO v${CMAKE_PROJECT_VERSION}")
+message(STATUS "Building lytroIO v${CMAKE_PROJECT_VERSION}")
 
 include(GNUInstallDirs)
 
@@ -77,11 +77,11 @@ set(SOURCES
 add_subdirectory(libs)
 
 # Create the library target
-add_library(LytroIO ${PUBLIC_HEADERS} ${PRIVATE_HEADERS} ${SOURCES})
-target_link_libraries(LytroIO PRIVATE nlohmann_json::nlohmann_json)
+add_library(lytroIO ${PUBLIC_HEADERS} ${PRIVATE_HEADERS} ${SOURCES})
+target_link_libraries(lytroIO PRIVATE nlohmann_json::nlohmann_json)
 
 # Add the include directories
-target_include_directories(LytroIO
+target_include_directories(lytroIO
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
@@ -90,7 +90,7 @@ target_include_directories(LytroIO
 )
 
 # Set the library version
-set_target_properties(LytroIO PROPERTIES
+set_target_properties(lytroIO PROPERTIES
     VERSION ${PROJECT_VERSION}
     SOVERSION 1
 )
@@ -102,8 +102,8 @@ else()
 endif()
 
 # Install the library
-install(TARGETS LytroIO
-    EXPORT LytroIOConfig
+install(TARGETS lytroIO
+    EXPORT lytroIOConfig
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
     RUNTIME DESTINATION bin
@@ -117,22 +117,22 @@ install(DIRECTORY include/lytroio
 )
 
 # Generate and install the CMake configuration files
-install(EXPORT LytroIOConfig
-    NAMESPACE LytroIO::
-    DESTINATION lib/cmake/LytroIO
+install(EXPORT lytroIOConfig
+    NAMESPACE lytroIO::
+    DESTINATION lib/cmake/lytroIO
 )
 
 # Create a package
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
-    ${CMAKE_CURRENT_BINARY_DIR}/LytroIOConfigVersion.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/lytroIOConfigVersion.cmake
     VERSION ${PROJECT_VERSION}
     COMPATIBILITY SameMajorVersion
 )
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/LytroIOConfigVersion.cmake
-    DESTINATION lib/cmake/LytroIO
+    ${CMAKE_CURRENT_BINARY_DIR}/lytroIOConfigVersion.cmake
+    DESTINATION lib/cmake/lytroIO
 )
 
 #------------------------------------------------------------
