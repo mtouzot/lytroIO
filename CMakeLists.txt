@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.10...3.21)
 # Start lytroIO project
 #------------------------------------------------------------
 project(lytroIO
-        VERSION "0.0.0"
+        VERSION "0.1.0"
         DESCRIPTION "A C++ library to process Lytro files"
         HOMEPAGE_URL "https://github.com/mtouzot/lytroIO"
         LANGUAGES CXX)
