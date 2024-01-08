@@ -1,4 +1,7 @@
 var files_dup =
 [
-    [ "include", "dir_d44c64559bbebec7f509842c48db8b23.html", "dir_d44c64559bbebec7f509842c48db8b23" ]
+    [ "config.h", "config_8h_source.html", null ],
+    [ "lytrodecoder.hpp", "lytrodecoder_8hpp_source.html", null ],
+    [ "lytroelement.hpp", "lytroelement_8hpp_source.html", null ],
+    [ "lytrofile.hpp", "lytrofile_8hpp_source.html", null ]
 ];
